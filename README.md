@@ -1,5 +1,8 @@
 # oF_2018SP
 
+Class slides are [here](https://drive.google.com/drive/folders/1a5XLCCIaZmdTavGbogB_-p-dzR81Ieeb?usp=sharing).
+You must be logged into your school account to access them.
+
 When you are pushing your work, do it in the correct project/name directory.  Don't add/delete others work.  All github activity will be timestamped with your name.
 
 For every project commit at least:
