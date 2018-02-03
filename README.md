@@ -32,6 +32,7 @@ Using a terminal:
   2. git add .			: Tells git to track all project files (Repeat steps 1,2 if you add new files)
   3. write your program	
   4. git commit -am "Message"	: Tells git to create a snapshot of the project.  Use a descriptive message!
+  5. git status			: Tells you what git wants to change.  Verify this before pushing!
   5. git pull			: Downloads changes from your classmates
   6. git push			: Uploads changes you've made
 ```
