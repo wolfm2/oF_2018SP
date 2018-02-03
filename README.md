@@ -36,6 +36,6 @@ Using a terminal:
   6. git pull			: Downloads changes from your classmates
   7. git push			: Uploads changes you've made
 ```
-You can iterate over 3-7 as often as you want. Every time you get a new part of your project working you should commit it so you can return to it later if needed.
+You can iterate over these steps as often as needed. Every time you get a new part of your project working you should commit it so you can return to it later if needed.
 
 For every project, some IDE files will **never** upload.  This is intentional as all environments generate huge files which don't relate to the app functionality.  The only files you need are in the "src" and (maybe) "data" directories.
