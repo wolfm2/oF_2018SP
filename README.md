@@ -4,6 +4,8 @@ Class oF example code is [here](https://github.com/wolfm2/oF_Examples).
 
 Class slides are [here](https://drive.google.com/drive/folders/1a5XLCCIaZmdTavGbogB_-p-dzR81Ieeb?usp=sharing).
  You must be logged into your school account to access them.
+ 
+Each week during class hours submit an issue to the repository containing your first,last name as it appears in canvas.  This will be used for attendance.
 
 When you are pushing your work, do it in the correct project/name directory.  Don't add/delete others work.  All github activity will be timestamped with your name.
 
@@ -28,7 +30,7 @@ Clone the class repository.
 Using a terminal:
 
 ```
-  1. cd YourNewProject
+  1. cd YourNewProject		: Type "cd ", drop your new project folder in the terminal, and hit enter.
   2. git add .			: Tells git to track all project files (Repeat steps 1,2 if you add new files)
   3. write some code	
   4. git commit -am "Message"	: Tells git to create a snapshot of the project.  Use a descriptive message!
