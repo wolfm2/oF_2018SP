@@ -30,10 +30,12 @@ Using a terminal:
 ```
   1. cd YourNewProject
   2. git add .			: Tells git to track all project files (Repeat steps 1,2 if you add new files)
-  3. write your program	
+  3. write some code	
   4. git commit -am "Message"	: Tells git to create a snapshot of the project.  Use a descriptive message!
   5. git status			: Tells you what git wants to change.  Verify this before pushing!
-  5. git pull			: Downloads changes from your classmates
-  6. git push			: Uploads changes you've made
+  6. git pull			: Downloads changes from your classmates
+  7. git push			: Uploads changes you've made
 ```
+You can iterate over 3-7 as often as you want. Every time you get a new part of your project working you should commit it so you can return to it later if needed.
+
 For every project, some IDE files will **never** upload.  This is intentional as all environments generate huge files which don't relate to the app functionality.  The only files you need are in the "src" and (maybe) "data" directories.
