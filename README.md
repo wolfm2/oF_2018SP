@@ -41,3 +41,18 @@ Using a terminal:
 You can iterate over these steps as often as needed. Every time you get a new part of your project working you should commit it so you can return to it later if needed.
 
 For every project, some IDE files will **never** upload.  This is intentional as all environments generate huge files which don't relate to the app functionality.  The only files you need are in the "src" and (maybe) "data" directories.
+
+## Compiling code
+
+Select an existing project or use [project generator](http://openframeworks.cc/learning/01_basics/create_a_new_project/) to create a new project.
+
+Using a terminal in macOS or Linux:
+
+```
+  1. cd TheProject		: Type "cd ", drop the project folder in the terminal, and hit enter.
+  2. make			: Takes your c++ files and assembles an app.
+  3. fix errors if any		: Any errors will prevent the program from compiling.
+  4. make RunRelease		: Runs the program if it successfully compiled.
+  - optionally -
+  make clean			: Will delete *all* previously compiled objects and start fresh.
+
