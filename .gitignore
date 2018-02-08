@@ -1,0 +1,19 @@
+*~
+*#
+*.zip
+*.tar.gz
+
+# visual studio
+
+*.VC.db
+
+# osx / xcode / openframeworks
+
+.DS_Store
+
+DerivedData
+
+obj
+**/bin/*
+!**/bin/data/
+
