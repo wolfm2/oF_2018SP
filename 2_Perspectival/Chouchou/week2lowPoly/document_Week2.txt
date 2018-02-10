@@ -1,0 +1,4 @@
+1. Cpp_Tutorial.png is the screenshot showing that I had finished the online c++ toturial.
+2. panda_lowpoly.png is the screenshot of my second week's homework, using lowpoly triangles in black and white mode to draw a panda face.
+3. src folder is the source folder of my coding work
+

@@ -1,0 +1,2 @@
+1.circle: In order to limit to the circle outside the mouse, I use mouseDistY to calculate the absolute value of the distance between y and mouseY and use the formula x*x + y*y<= radius*radius to limit the shape to a circle.
+2.FBO: I change the background of the canvas to black(0,0,0) and fill the screen size rectangle into black to make the shape fade out naturally
