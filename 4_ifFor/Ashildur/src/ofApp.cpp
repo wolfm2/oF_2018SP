@@ -2,50 +2,32 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-ofBackground(178, 180, 214);
-ofSetBackgroundAuto(false);
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+    int mouseX = 0; //these are globals
+    int mouseY = 0;
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    
-    
-    ofSetColor(255,255,255);
-    ofDrawEllipse(600, 600, 300, 100);
-    
-    ofFill();
-    ofSetColor(0,0,0);
-    ofDrawRectangle(100, 100, 100, 100);
-    
-    
-    ofSetColor(255, 105, 97);
-    ofDrawRectRounded(200, 200, 100, 200, 100);
-    ofDrawBitmapString("Hello, we are shapes", 500, 300);
-    
-    ofSetColor(146, 187, 255);
-    ofDrawSphere(400, 400, 60);
-    
-    ofSetColor(255, 255, 255);
-    ofDrawCircle(300, 300, 50);
-    ofDrawEllipse(600, 600, 300, 100);
-    
-    ofSetColor(47, 255, 173);
-    ofDrawTriangle(400, 400,400, 400, 400, 400);
-    
-    ofSetColor(90, 200, 200);
-    ofDrawSphere(100, 300, 50);
-    
-    ofSetColor(255, 105, 97);
-    ofDrawLine(10, 600, 600, 600);
-    ofDrawLine(400, 500, 600, 800);
-    ofDrawLine(600, 800, 400, 500);
-    
-
+    int deltaX = ofMap(mouseX, 0, ofGetWidth(), 0, 50); // scale position of mouse
+     int deltaY = ofMap(mouseY, 0, ofGetHeight(), 0, 50);
+    int y = 100;
+     for (int y = 0; y < ofGetHeight(); y += 20 + deltaY) {  // don't get closer than 20, now we have many lines
+    for (int x = 0; x < ofGetWidth(); x += 20 + deltaX) {
+        int mouseDistX = abs(x - mouseX);
+        if (mouseDistX < 100) {  // if mouseX is < 100 px away from a circle
+          ofNoFill();
+        } else {
+        ofFill();
+        }
+        ofSetColor(0, 0, 255);
+        ofDrawCircle(x, y, 20);  // Make sure Y is declared!  Ex: int y=100;
+        }
+    }
 
 }
 
@@ -61,7 +43,11 @@ void ofApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
-
+    mouseX = x;
+    //x and y are "locals" or "locals variables"
+    
+    mouseY = y;
+    //locals override globals of the same name
 }
 
 //--------------------------------------------------------------
