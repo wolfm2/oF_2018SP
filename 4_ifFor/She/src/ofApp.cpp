@@ -2,62 +2,35 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofBackground(0, 0, 0);
-    
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    
+    int mouseX = 0; // these are globals
+    int mouseY = 0;
+
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    
-    ofSetColor(204, 255, 255);
-    ofDrawTriangle(512, 0, 192, 576, 832, 576);
-    
-    ofSetColor(255, 255, 102);
-    ofDrawCircle(512, 384, 300);
+    int deltaX = ofMap(mouseX, 0, ofGetWidth(), 0, 50);
+    int deltaY = ofMap(mouseY, 0, ofGetHeight(), 0, 50);
+    for (int y = 0; y < ofGetHeight(); y += 10 + deltaY){
+        for(int x = 0; x < ofGetWidth(); x += 10 + deltaX){
+        int mouseDistX = abs(x - mouseX);
+        if (mouseDistX < 100){
+            ofNoFill();
+        }else{
+            ofFill();
+        }
+        ofSetColor(255, 0, 0); // filled with red color
+        ofDrawRectangle(x, y, 20, 20); // draw a rectangle with 20 pixs
+      }
+        
+    }
 
-    ofSetColor(0, 255, 255);
-    ofDrawEllipse(512, 384, 600, 100);
-
-    ofSetColor(255);
-    ofDrawLine(0,384, 1024, 384);
-    ofSetColor(255);
-    ofDrawLine(512,0, 512, 768);
-    
-    
-
-    ofSetColor(255, 153, 0);
-    ofDrawRectangle(0, 0, 100, 100);
-    ofSetColor(255, 153, 0);
-    ofDrawRectangle(924, 0, 100, 100);
-    ofSetColor(255, 153, 0);
-    ofDrawRectangle(0, 668, 100, 100);
-    ofSetColor(255, 153, 0);
-    ofDrawRectangle(924, 668, 100, 100);
-    
-    
-    
-
-    ofSetColor(0, 255, 0);
-    ofDrawCurve(0, 384,256, 192,  768, 576,1024, 384 );
-    ofSetColor(0, 255, 0);
-    ofDrawCurve(1024, 384,256,576, 768, 192, 0, 384);
-
-   
-    
-    
-    ofSetColor(255);
-    ofDrawBitmapString("Lavonne's Geometry World", 676, 676);
-
-    
-    
-    
 }
-
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
@@ -71,6 +44,8 @@ void ofApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
+    mouseX = x;
+    mouseY = y;
 
 }
 

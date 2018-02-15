@@ -2,65 +2,33 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofSetVerticalSync(true);
-    ofSetWindowShape(1024, 768);
-    ofSetWindowTitle("flow01");
-    ofSetFrameRate(60);
-    ofBackground(10, 10, 10);
-    
-    cam.initGrabber(640, 480);
-    
-    //    int width, int height,
-    //    double pyramidScale,
-    //    int pyramidLevels,
-    //    int windowSize,
-    //    int iterationsPerLevel,
-    //    int expansionArea,
-    //    double expansionSigma,
-    //    bool flowFeedback,
-    //    bool gaussianFiltering
-    flowSolver.setup(640, 480, 0.35, 5, 10, 1, 3, 2.25, false, false);
-    
-    for(int i=0; i < 200; i++) {
-        Spinner s;
-        s.setup();
-        spinners.push_back( s );
-    }
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    cam.update();
-    if(cam.isFrameNew()) {
-        flowSolver.update(cam);
-        for(auto& s : spinners) {
-            ofPoint flow = flowSolver.getVelAtPixel(s.pos.x, s.pos.y);
-            s.rotVel += flow;
-        }
-    }
-
-    for(int i=0; i<spinners.size(); i++) {
-        spinners[i].update();
-    }
+    int mouseX = 0; //these are globals
+    int mouseY = 0;
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    ofPushMatrix();
-    ofScale(2, 2);
-    ofSetColor(255, 255, 255);
-    cam.draw(0, 0, cam.getWidth(), cam.getHeight());
-    
-    // width,  height, lineScale, res
-    //flowSolver.drawColored(cam.getWidth(), cam.getHeight(), 10, 10);
-    
-    for(int i=0; i<spinners.size(); i++) {
-        spinners[i].draw();
+    int deltaX = ofMap(mouseX, 0, ofGetWidth(), 0, 50); // scale position of mouse
+     int deltaY = ofMap(mouseY, 0, ofGetHeight(), 0, 50);
+    int y = 100;
+     for (int y = 0; y < ofGetHeight(); y += 20 + deltaY) {  // don't get closer than 20, now we have many lines
+    for (int x = 0; x < ofGetWidth(); x += 20 + deltaX) {
+        int mouseDistX = abs(x - mouseX);
+        if (mouseDistX < 100) {  // if mouseX is < 100 px away from a circle
+          ofNoFill();
+        } else {
+        ofFill();
+        }
+        ofSetColor(0, 0, 255);
+        ofDrawCircle(x, y, 20);  // Make sure Y is declared!  Ex: int y=100;
+        }
     }
-    ofPopMatrix();
-    
-    
-    ofDrawBitmapStringHighlight(ofToString(ofGetFrameRate()), 10, 20);
+
 }
 
 //--------------------------------------------------------------
@@ -75,7 +43,11 @@ void ofApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
-
+    mouseX = x;
+    //x and y are "locals" or "locals variables"
+    
+    mouseY = y;
+    //locals override globals of the same name
 }
 
 //--------------------------------------------------------------

@@ -2,62 +2,45 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofBackground(0, 0, 0);
-    
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    
+
 }
 
 //--------------------------------------------------------------
+int mouseX = 0;  // these are globals
+int mouseY = 0;
+float R,G,B;
+
 void ofApp::draw(){
-    
-    ofSetColor(204, 255, 255);
-    ofDrawTriangle(512, 0, 192, 576, 832, 576);
-    
-    ofSetColor(255, 255, 102);
-    ofDrawCircle(512, 384, 300);
+    int deltaX = ofMap(mouseX, 0, ofGetWidth(), 0, 50); // scale position of mouse
+     int deltaY = ofMap(mouseY, 0, ofGetHeight(), 0, 50);
+    int y = 100;
+     for (int y = 0; y < ofGetHeight(); y += 40 + deltaY) {  // don't get closer than 20
+    for (int x = 0; x < ofGetWidth(); x += 20 + deltaX) {
+        int mouseDistX = abs(x - mouseX);
+        int mouseDistY = abs(y - mouseY);
+        if (mouseDistX < 80 && mouseDistY < 100) {  // if mouseX is < 100 px away from a circle
+            R = ofRandom(0,200);
+            G = ofRandom(30,100);
+            B = ofRandom(90,200);
+            ofSetColor(R, G, B,30);
+//            float randomColor = ofRandom(161,66);
+//            ofSetColor(randomColor, 50);
+            ofNoFill();
+        } else {//true or false
+//            ofSetColor(34,80,2);
+        ofFill();
+        }
+//        ofSetColor(0, 0, 255);
+        ofDrawCircle(x, y, 80);  // Make sure Y is declared!  Ex: int y=100;
+        }
+    } //is will draw the circle in the screen, because the x's position is less than the width it wikk keep drawing
 
-    ofSetColor(0, 255, 255);
-    ofDrawEllipse(512, 384, 600, 100);
-
-    ofSetColor(255);
-    ofDrawLine(0,384, 1024, 384);
-    ofSetColor(255);
-    ofDrawLine(512,0, 512, 768);
-    
-    
-
-    ofSetColor(255, 153, 0);
-    ofDrawRectangle(0, 0, 100, 100);
-    ofSetColor(255, 153, 0);
-    ofDrawRectangle(924, 0, 100, 100);
-    ofSetColor(255, 153, 0);
-    ofDrawRectangle(0, 668, 100, 100);
-    ofSetColor(255, 153, 0);
-    ofDrawRectangle(924, 668, 100, 100);
-    
-    
-    
-
-    ofSetColor(0, 255, 0);
-    ofDrawCurve(0, 384,256, 192,  768, 576,1024, 384 );
-    ofSetColor(0, 255, 0);
-    ofDrawCurve(1024, 384,256,576, 768, 192, 0, 384);
-
-   
-    
-    
-    ofSetColor(255);
-    ofDrawBitmapString("Lavonne's Geometry World", 676, 676);
-
-    
-    
-    
 }
-
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
@@ -71,6 +54,10 @@ void ofApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
+    mouseX = x;
+    // x and y are "locals" or “local variables”
+    mouseY = y;
+    // locals override globals of the same name!!
 
 }
 

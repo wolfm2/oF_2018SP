@@ -1,9 +1,6 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxOpticalFlowFarneback.h"
-#include "Spinner.hpp"
-
 
 class ofApp : public ofBaseApp{
 
@@ -24,7 +21,16 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-        ofVideoGrabber cam;
-        ofxOpticalFlowFarneback flowSolver;
-        vector<Spinner> spinners;
+    int x;
+    int y;
+    int x1;
+    int y1;
+    int x2;
+    int y2;
+    int R;
+    int G;
+    int B;
+    
+    
+    
 };
