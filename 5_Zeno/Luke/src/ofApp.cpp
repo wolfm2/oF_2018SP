@@ -26,39 +26,6 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 
-    // float xMod = min((mouseX - rect_pos.x), maxSpeed) / maxSpeed;
-    // float yMod = min((mouseY - rect_pos.y), maxSpeed) / maxSpeed;
-
-    // float xMod = min(maxSpeed / (maxSpeed * (mouseX - rect_pos.x)), maxSpeed);
-    // float yMod = min(maxSpeed / (maxSpeed * (mouseY - rect_pos.y)), maxSpeed);
-
-    // float xMod = (mouseX - rect_pos.x) > 0 ? min(maxSpeed / (maxSpeed * (mouseX - rect_pos.x)), maxSpeed) : max(maxSpeed / (maxSpeed * (mouseX - rect_pos.x)), -maxSpeed);
-    // float yMod = (mouseY - rect_pos.y) > 0 ? min(maxSpeed / (maxSpeed * (mouseY - rect_pos.y)), maxSpeed) : max(maxSpeed / (maxSpeed * (mouseY - rect_pos.y)), -maxSpeed);
-
-    // if(!isinf(abs(xMod))) {
-    //     if(xMod > (mouseX - rect_pos.x)) {
-    //         rect_pos.x += (mouseX - rect_pos.x);
-    //     }
-    //     else {
-    //         rect_pos.x += xMod;
-    //     }
-    // }
-
-    // if(!isinf(abs(yMod))) {
-    //     if(yMod > (mouseY - rect_pos.y)) {
-    //         rect_pos.y += (mouseY - rect_pos.y);
-    //     }
-    //     else {
-    //         rect_pos.y += yMod;
-    //     }
-    // }
-
-    // rect_pos.x += !isinf(abs(xMod)) ? xMod : 0;
-    // rect_pos.y += !isinf(abs(yMod)) ? yMod : 0;
-
-    // rect_pos.x += rect_catchUpSpeed * xMod;
-    // rect_pos.y += rect_catchUpSpeed * yMod;
-
     float xMod;
     float yMod;
 
