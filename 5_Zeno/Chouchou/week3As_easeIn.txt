@@ -1,0 +1,10 @@
+step:
+1. I use ofGetwidth()/abs(mouseX-Distance.x) to decide the absolute changable speed according to the distance between rectangle and the mouse.  the speed creates when the distance decreases.
+2. I use unit.x = updateDistance.x/abs(updateDistance.x)*sqrt((updateDistance.x)*(updateDistance.x) / ((updateDistance.x)*(updateDistance.x) + (updateDistance.y)*(updateDistance.y)));
+	 unit.y = updateDistance.y / abs(updateDistance.y)*sqrt((updateDistance.y)*(updateDistance.y) / ((updateDistance.x)*(updateDistance.x) + (updateDistance.y)*(updateDistance.y)));
+   to determine the unit vector to decide the direction from the rectangle pointing to mouse 
+3. because when the rectangle is too close to mouse, the speed will turn to be an infinite number, so I set a limit of the distance of 10 to limit the maxspeed
+4. When the distance is lower than 1, set it to the originial status where the rectangle is at (0,0)
+
+
+I tried to decide the speed linearly using the distance, but failed. My try on this is in the function called easeInVersionTwo().
