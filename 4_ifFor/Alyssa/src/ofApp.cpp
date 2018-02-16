@@ -19,13 +19,17 @@ void ofApp::draw(){
     for (int y = 0; y < ofGetHeight(); y += 20 + deltaY) {  // don't get closer than 20
         for (int x = 0; x < ofGetWidth(); x += 20 + deltaX) {
             int mouseDistX = abs(x - mouseX);
-            if (mouseDistX < 100) {  // if mouseX is < 100 px away from a circle
+            if (mouseX < ofGetWidth()/2){
+//            if (mouseDistX < 100) {  // if mouseX is < 100 px away from a circle
                 ofNoFill();
             } else {
                 ofFill();
+                
             }
-            ofSetColor(0, 0, 255);
-            ofDrawCircle(x, y, 20);  // Get y value from for statement.
+            ofSetColor(x, y, x-y, y);
+//            ofSetColor(0, 0, 255);
+            ofDrawCircle(x, y, deltaX);
+            //ofDrawCircle(x, y, 20);  // Get y value from for statement.
         }
     }
 }
