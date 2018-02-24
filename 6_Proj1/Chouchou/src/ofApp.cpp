@@ -214,7 +214,7 @@ void draw2_Question() {
 	}
 }
 void draw3_NewOne() {
-	cout << draw3Num<<"//";
+
 	if (draw3Num <= 300) {
 		drawContinuousRects();
 		ofFill();
