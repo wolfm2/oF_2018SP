@@ -1,0 +1,26 @@
+For this project I tried to convey the changing relationship between our cat and recently adopted puppy.
+
+Simple shapes represent the cat and dog in the animation. The bodies are drawn with circles, while the 
+ears were added in using triangles which were translated and rotated around the x-y coordinates of the 
+body to give a sense of direction.
+
+The dog is controlled via the mouse, and faces towards the mouse movement. The cat moves in a circle, 
+with the radius offset using perlin noise to give it an organic feeling, instead of moving in a straight 
+circle.
+
+When the dog gets close to the cat and passes a threshold radius, the cat "hisses", moving the origin 
+of its movement circle in the opposite direction. It also turns red and increases in size to show its 
+anger. All of these responses use easing functions to give them a smoother feel.
+
+While creating the project I ran in to two major problems. The first is that my object oriented skills 
+are a little rusty, and I ended up not planning things out well and overloading most of my inherited 
+functions.
+
+The second issue I ran in to was in regards to some vector math. The ofPoint object in 
+openframeworks is used to store point coordinates, but it's just a typedef for the ofVec3f class. 
+This means that all the functions that apply to ofPoint are just vector math functions. For example, 
+if your mouse moves from ofPoint(1, 0) to ofPoint(0, 1), the angle between the two vectors is 90 
+degrees. If you want to treat them as points however, your angle difference would be calculated 
+using atan2(yDiff, xDiff), giving you 135 degrees as a heading. I spent a bunch of time using 
+the angle() method of ofPoint/ofVec3f trying to determine heading, when I should have been using 
+atan2().
