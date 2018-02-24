@@ -1,6 +1,9 @@
 ## Make a new project using the addon ofxJSON: 
 
-	Write "Hello World" on the canvas.
+	Write "Hello World" on the canvas.  (Once successful, this can be removed.)
+	
+	Using our Web API:
+	
 	Draw the summary text and high temperature for tomorrow on the canvas.
 	Use key presses 0-7 to print the above for each day in the forecast. 
 	Draw an orange circle on the screen at y=100 r=50.

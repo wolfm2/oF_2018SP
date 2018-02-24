@@ -2,7 +2,8 @@
 
 	Create a story with no text
 
-	Translate a narrative with
+	Translate a narrative with: 
+	
 	for / if statements
 	shapes/colors/alpha/movement/sound/easing
 	At least one of: matrix or fbo
