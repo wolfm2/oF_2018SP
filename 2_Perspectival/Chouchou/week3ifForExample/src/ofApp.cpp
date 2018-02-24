@@ -37,7 +37,9 @@ void ofApp::draw(){
 				else {
 					ofFill();
 				}
-				ofSetColor(0, 0, 255);
+				ofSetColor(ofMap(x, 0, ofGetWidth(), 0, 255), ofMap(y, 0, ofGetHeight(), 0, 255),255);
+			
+				//ofSetColor(0, 0, 255);
 				ofDrawCircle(x, y, 20);  // Get y value from for statement.
 			}
 		}
