@@ -17,6 +17,7 @@ void ofApp::setup(){
 	simpsons.load("Simpsons.png");
 	ofSetWindowShape(1200, 1200);
 	myfont.load("orangeJuice.ttf",50);
+
 }
 
 //--------------------------------------------------------------
@@ -46,7 +47,16 @@ void ofApp::draw(){
 	ofPopMatrix();	
 	ofFill();
 	ofSetColor(0, 0, 0);
-	myfont.drawString(enterString, ofGetWidth() / 2-300, ofGetHeight() / 2-300);
+	myfont.load("orangeJuice.ttf", 50);
+	myfont.drawString(enterString, ofGetWidth() / 2-300, ofGetHeight()-300);
+	myfont.load("orangeJuice.ttf", 30);
+	myfont.drawString("Control width: w/W", 50, 50);
+	myfont.drawString("Rotate by X axis: x/X", 50, 90);
+	myfont.drawString("Rotate by Y axis: y/Y", 50, 130);
+	myfont.drawString("Rotate by Z axis: z/Z", 50, 170);
+	myfont.drawString("Control directions: a/d/s/q", 50, 210);
+	
+
 }
 
 //--------------------------------------------------------------
