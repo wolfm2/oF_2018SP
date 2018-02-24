@@ -4,7 +4,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-    mySound.load("piano.mp3");
+
     
     a.load("frame1.jpg");
     b.load("2.jpg");
@@ -31,6 +31,7 @@ float rY = 0;
 float rZ = 0;
 //--------------------------------------------------------------
 void ofApp::update(){
+    mySound.loadSound("piano.mp3");
     mySound.play();
     
     rX++;
