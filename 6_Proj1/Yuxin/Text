@@ -1,0 +1,14 @@
+Concept: It's vital to stay different from your surroundings no matter where you are.
+
+Inspiration: I got my inspiration from the famous geometry painting by Mondrian.
+
+Coding:
+from line 32-59, I used ofDrawRectangle and ofSetcolor to draw the Mondrian Painting.
+from line 62-111, I used if() to change the color of the circle according to its position.
+from line 15-17, 23 & line 68-75, I TRIED to use the Matrix() to rotate the circle but I failed.
+
+Issue:
+Basically, I declared rX, rY and rZ in line 15-17, and update them in line 23-25.
+From line 68-75, I tried to draw the circle ofDrawCircle() in the ofMatrix() but it doesn't work.
+I wonder whether I could directly draw a circle in the ofMatrix().
+Thanks!
