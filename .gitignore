@@ -16,4 +16,4 @@ DerivedData
 obj
 **/bin/*
 !**/bin/data/
-
+*Debug.app
