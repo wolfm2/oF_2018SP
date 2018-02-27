@@ -44,16 +44,16 @@ void ofApp::keyPressed(int key){
         rZ --;
     }
     if(key == 'q'){
-        pY -3;
+        pY --;
     }
     if(key == 'a'){
-        pX -3;
+        pX --;
     }
     if(key == 's'){
-        pY +3;
+        pY ++;
     }
     if(key == 'd'){
-        pX +3;
+        pX ++;
     }
     if(key == 'w'){
         wX ++;
