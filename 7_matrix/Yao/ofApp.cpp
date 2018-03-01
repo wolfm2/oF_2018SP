@@ -1,42 +1,62 @@
 #include "ofApp.h"
-
+ofImage diamond;
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+    diamond.load ("diamond.png");
 }
+float x=0;
+float y=0;
+bool state=false;
+bool state1=false;
+bool state2=false;
+float scaleX=1;
+float scaleY=0.8;
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    int mouseX = 0; //these are globals
-    int mouseY = 0;
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    
     ofBackground(0);
     
-    int deltaX = ofMap(mouseX, 0, ofGetWidth(), 0, 50); // scale position of mouse
-     int deltaY = ofMap(mouseY, 0, ofGetHeight(), 0, 50);
-    int y = 100;
-     for (int y = 0; y < ofGetHeight(); y += 20 + deltaY) {  // don't get closer than 20, now we have many lines
-    for (int x = 0; x < ofGetWidth(); x += 20 + deltaX) {
-        int mouseDistX = abs(x - mouseX);
-        if (mouseDistX < 100) {  // if mouseX is < 100 px away from a circle
-          ofNoFill();
-        } else {
-        ofFill();
-        }
-        ofSetColor(0, x, y);
-        ofDrawRectangle(x, y, 20, 20);  // Make sure Y is declared!  Ex: int y=100;
-        }
+    ofPushMatrix();
+    ofTranslate(ofGetWidth()/2+x,ofGetHeight()/2+y);
+    if(state==true){
+        ofRotateX(60);
     }
-
+    if(state1==true){
+        ofRotateY(30);
+    }
+    if(state2==true){
+        ofRotateZ(90);
+    }
+    ofScale(scaleX, scaleY);
+    diamond.draw(0-diamond.getWidth()/2,0-diamond.getHeight()/2);
+    ofPopMatrix();
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+    if(key=='x'){
+        state= !state;
+    }
+    if(key=='y'){
+        state1= !state1;
+    }
+    if(key=='z'){
+        state2= !state2;
+    }
+    if (key == 'q','a','s','d'){
+        x ++, y ++;
+    }
+    if(key=='h'){
+        scaleX-=0.1, scaleY-=0.1;
+    }
+    if(key=='H'){
+        scaleX+=0.1,scaleY+=0.1;
+    }
 }
 
 //--------------------------------------------------------------
@@ -46,11 +66,7 @@ void ofApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
-    mouseX = x;
-    //x and y are "locals" or "locals variables"
-    
-    mouseY = y;
-    //locals override globals of the same name
+
 }
 
 //--------------------------------------------------------------
