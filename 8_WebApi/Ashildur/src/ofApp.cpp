@@ -11,7 +11,7 @@ ofTrueTypeFont font;
 
 using namespace std;
 int main();
-
+int dayTime = 0;
 int day = 0;
 int circleX = 0;
 float value = 0;
@@ -21,11 +21,14 @@ float value = 0;
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+    ofSetWindowShape(1200, 1200);
     
     string url = "https://api.darksky.net/forecast/b26addef80e8df9aa1e2ff19ab05f23d/37.8267,-122.4233";
     json.open(url);
     
-    font.load("vag.ttf", 15);
+    font.load("vag.ttf", 20);
+    
+    
 
 
 }
@@ -67,18 +70,36 @@ void ofApp::draw(){
 //    font.drawString(enterString, ofGetWidth() / 2 - 90, ofGetHeight () / 2 - 90);
 //    enterString = "Hello World!";
 
+    ofSetColor(0);
+    font.drawString("Summary tomorrow: ", 25, 220);
     string summary = json["daily"]["data"][day]["summary"].asString();
+    
+    ofSetColor(0);
+    font.drawString("Tomorrow's Temperature High: ", 25, 350);
     string hightemp = json["daily"]["data"][day]["temperatureHigh"].asString();
+    
+  
+  
 
     ofSetColor (0,0,0);
-    font.drawString(summary, 20, 250);
-    font.drawString(hightemp, ofGetWidth() / 2, 350);
+    font.drawString(summary, 25, 250);
+    font.drawString(hightemp, 25, 380);
 
 
 
     circleX = ofMap(currenttime, sunrise, sunset, day, ofGetWidth(), ofGetHeight());
     ofSetColor(255,165,0);
     ofDrawCircle(circleX, 100,50);
+    
+    //THE CURRENT TIME
+    std::time_t epoch;
+    struct tm * day;
+    epoch = json["daily"]["data"][dayTime]["time"].asInt();
+    day = localtime(&epoch);
+    
+    float dayStringWidth = font.stringWidth(asctime(day));
+    font.load("vag.ttf", 20);
+    font.drawString(asctime(day), 25, 160);
 
 
 }
