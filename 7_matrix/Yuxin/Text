@@ -1,0 +1,4 @@
+What I accomplished in this project:
+
+1. change the parameters of the image with keyPressed() function & draw() function.
+2. load font to use font.draw() function to the string for the instruction. (Learn it from Chouchou's work!!)
