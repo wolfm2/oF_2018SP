@@ -7,7 +7,7 @@ void ofApp::setup(){
     
     ofBackground(255);
     feather.load("images/feather.jpg");
-    font.load("font/font.otf",50);
+    font.load("font/font.otf",30);
     
 }
 //--------------------------------------------------------------
@@ -53,9 +53,9 @@ void ofApp::draw(){
 //  leaf.draw(0 - leaf.getWidth()/2, 0 - leaf.getHeight()/2);  // draw at new 0,0
 
     
-    ofSetColor(255, 10, 220);
+    ofSetColor(0);
     ofFill();
-    font.drawString(" play with me ", 100, 150);
+    font.drawString(" please let me fly ", 100, 150);
 //    ofSetColor(255, 255, 0);
 //    ofFill();
 //    font.drawString(" play with me ", 200, 200);
@@ -64,14 +64,16 @@ void ofApp::draw(){
     //rotate feather.
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
-    ofScale(1 + featherScaleW ,1 + featherScaleH ,1);
+    ofScale(0.25 + featherScaleW ,0.25 + featherScaleH ,0.25);
     
     
     ofRotate(featherX);        //rotate x,y,z
     ofRotate(featherY);
     ofRotate(featherZ);
     
-    ofNoFill();
+    
+    ofSetColor(255);
+    ofFill();
     feather.draw(0 - feather.getWidth()/2 + featherTranslateX , 0 - feather.getHeight()/2 + featherTranslateY);
     
     ofPopMatrix();
@@ -122,38 +124,38 @@ void ofApp::keyPressed(int key){
     
     if( key == 'w'){
 
-        featherScaleW -= 0.2;
+        featherScaleW -= 0.1;
     }
     
     if( key == 'W'){
 
-        featherScaleW += 0.2;
+        featherScaleW += 0.1;
     }
     
     if( key == 'h'){
 
-        featherScaleH -= 0.2;
+        featherScaleH -= 0.1;
     }
     
     if( key == 'H'){
 
-        featherScaleH += 0.2;
+        featherScaleH += 0.1;
     }
     
     if( key == 'a'){
-        featherTranslateX -= 1;
+        featherTranslateX -= 5;
     }
     
     if( key == 'd'){
-        featherTranslateX += 1;
+        featherTranslateX += 5;
     }
     
     if( key == 'q'){
-        featherTranslateY -= 1;
+        featherTranslateY -= 5;
     }
     
     if( key == 's'){
-        featherTranslateY += 1;
+        featherTranslateY += 5;
     }
     
 
