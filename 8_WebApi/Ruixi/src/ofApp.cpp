@@ -3,7 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 //    ofSetWindowShape(1920, 1080);
-    myFont.load("font/BodoniXT.ttf", 15);
+    myFont.load("font/pixel.ttf", 15);
    
 
     //darksky API json load and open
@@ -16,11 +16,13 @@ void ofApp::setup(){
     // debug  does json open.
     if (jsonSuccessful)
     {
-        ofLogNotice("ofApp::setup") << json.getRawString(true);
+        ofLogNotice("ofApp::setup") << "JSON now is sucessful";
     } else {
         ofLogNotice("ofApp::setup") << "Failed to parse JSON.";
     }
 
+    
+    
     
     
 //    background color
@@ -38,13 +40,9 @@ void ofApp::setup(){
     
     
    
-    //lerp background color
-    ofColor y = ofColor::yellow;
-    ofColor b = ofColor::black;
-    skyColorMix = ofMap(currentTime, sunRise,sunSet,0, 1);
-//    skyColorMix = 0.5;
-    y.lerp(b, lerpBB);
-    ofSetBackgroundColor(y.lerp(b, skyColorMix));
+  
+    
+
     
     
     
@@ -87,22 +85,28 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
    
-//    //here is print the local time
-//    std::time_t epoch;
-//    struct tm * timeinfo;  // * points to a structure. We'll get to this later.
-//    bool currentTime = true;  // print current time or convert an epoch
-//
-//    if (currentTime) {
-//        std::time ( &epoch ); // & gets the variable address. We'll get to this later.
-//    } else {
-//        epoch = 1519520000;  // or whatever epoch you have from json.
-//    }
+    
 
     
-//
-//    timeinfo = localtime ( &epoch );
-//    std::cout << std::asctime(timeinfo);  // prints: Sat Feb 24 19:53:20 2018
-//
+  //  here is print the local time
+    std::time_t epoch;
+    struct tm * timeinfo;  // * points to a structure. We'll get to this later.
+    bool currentTime = true;  // print current time or convert an epoch
+
+    if (currentTime) {
+        std::time ( &epoch ); // & gets the variable address. We'll get to this later.
+    } else {
+        epoch = json["current"]["time"].asInt();;  // or whatever epoch you have from json.
+    }
+
+    
+
+    timeinfo = localtime ( &epoch );
+    std::cout << std::asctime(timeinfo);  // prints: Sat Feb 24 19:53:20 2018
+
+    
+    
+    
     
     //here is get the data from API
     
@@ -110,26 +114,48 @@ void ofApp::draw(){
     highTemperature = json["daily"]["data"][dayNum]["temperatureHigh"].asString();
     sunRise = json["daily"]["data"][dayNum]["sunriseTime"].asInt();
     sunSet = json["daily"]["data"][dayNum]["sunsetTime"].asInt();
-    currentTime  = json["daily"]["data"][dayNum]["time"].asInt();
-
+    //    currentTime  = json["current"]["time"].asInt();
+    
     //    currentMin = toMinute(currentTime);
     //    sunRiseMin = toMinute(sunRise);
     //    sunSetMin = toMinute(sunSet);
     
     cout << "sunRise: "<<sunRise<<endl;
     cout << "sunSet: "<<sunSet<<endl;
-    cout << "currentTime: "<<currentTime <<endl;
+//    cout << "currentTime: "<<currentTime <<endl;
     cout << "day: "<<dayNum<<endl;
     
     
     
-    // sun
-        sunLocationX = ofMap(currentTime, sunRise, sunSet, 0, ofGetWidth());
-        ofSetColor(255, sunColor%255, 51);     //change the color from update
-        ofFill();
-        ofSetCircleResolution(100);
-        ofDrawCircle(sunLocationX, 100, 50);
     
+    
+    
+    //lerp background color
+    ofColor y = ofColor::yellow;
+    ofColor b = ofColor::black;
+    skyColorMix = ofMap(currentTime, sunRise,sunSet,0, 1);
+    //    skyColorMix = 0.5;
+    //    y.lerp(b, lerpBB);
+    ofSetBackgroundColor(y.lerp(b, skyColorMix));
+    
+    
+    
+    // sun
+        sunLocationX = ofMap(currentTime,
+                             json["daily"]["data"][0]["sunriseTime"].asInt(),
+                             json["daily"]["data"][0]["sunsetTime"].asInt(),
+
+                             0 + 50, ofGetWidth() - 150);
+    
+    
+        ofSetCircleResolution(100);
+        ofSetColor(ofColor::orange);     //change the color from update
+        ofFill();
+    
+        ofDrawCircle(sunLocationX, 200, 50);
+    
+    cout<< "sunLocationX:"<<sunLocationX<<endl;
+
     
     
     
@@ -175,11 +201,15 @@ void ofApp::draw(){
     
     
     //Text from API
-    ofSetColor(255, 100, 150);
+    ofSetColor(255);
     ofFill();
-    myFont.drawString(summaryText, 500,400);
-    myFont.drawString("Today's hight temperature:"+ highTemperature, 100, 100);
+    myFont.drawString(summaryText, 100,500);
+    myFont.drawString("Today's hight temperature:"+ highTemperature, 100, 530);
+    
+    ofNoFill();
+    ofDrawTriangle(80, 485, 70, 503, 90, 503);
   
+    ofDrawLine(0, 470, ofGetWidth(), 470);
  
     
 
