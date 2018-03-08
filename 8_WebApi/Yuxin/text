@@ -1,0 +1,17 @@
+For this assignment,
+1. load a font to draw strings: font.load("AmaticSC-Bold.ttf", 30);
+2. connect to the weather Api: string url = "https://api.darksky.net/forecast/b2f3df8e0c99cdbcb97ccf437e9676f3/37.8267,-122.4233";
+3. draw strings for summary text and tmr's highest temp:
+    string summary = json["daily"]["data"][day]["summary"].asString();
+    string hightemp = json["daily"]["data"][day]["temperatureHigh"].asString();
+4. declare a variable "day" to store the digits decided by the key we press.
+5. use ofMap() to create circle's X position as well as the background color.
+
+Issue:
+I'm not sure whether the current time I got from the Api is corresponding to the requirement, or I need to get a literally "current time"
+with the ofGetUnixTime? Here are what I wrote down:
+
+    int sunrise = json["daily"]["data"][day]["sunriseTime"].asInt();
+    int sunset = json["daily"]["data"][day]["sunsetTime"].asInt();
+    int currenttime = json["currently"]["time"].asInt();
+    value = ofMap(currenttime, sunrise, sunset, 0,1);

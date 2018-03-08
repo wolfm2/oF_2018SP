@@ -13,6 +13,9 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    
+    ofBackground(0);
+    
     int deltaX = ofMap(mouseX, 0, ofGetWidth(), 0, 50); // scale position of mouse
      int deltaY = ofMap(mouseY, 0, ofGetHeight(), 0, 50);
     int y = 100;
@@ -24,8 +27,8 @@ void ofApp::draw(){
         } else {
         ofFill();
         }
-        ofSetColor(0, 0, 255);
-        ofDrawCircle(x, y, 20);  // Make sure Y is declared!  Ex: int y=100;
+        ofSetColor(0, x, y);
+        ofDrawRectangle(x, y, 20, 20);  // Make sure Y is declared!  Ex: int y=100;
         }
     }
 
