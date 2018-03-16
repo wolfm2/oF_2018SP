@@ -1,0 +1,995 @@
+{
+   "document_tone" : {
+      "tones" : [
+         {
+            "score" : 0.515079,
+            "tone_id" : "joy",
+            "tone_name" : "Joy"
+         },
+         {
+            "score" : 0.589773,
+            "tone_id" : "sadness",
+            "tone_name" : "Sadness"
+         },
+         {
+            "score" : 0.653291,
+            "tone_id" : "fear",
+            "tone_name" : "Fear"
+         },
+         {
+            "score" : 0.567507,
+            "tone_id" : "analytical",
+            "tone_name" : "Analytical"
+         }
+      ]
+   },
+   "sentences_tone" : [
+      {
+         "sentence_id" : 0,
+         "text" : "Just 20 years ago, federal laws did not recognize that men could be harassed by other men.",
+         "tones" : [
+            {
+               "score" : 0.873263,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 1,
+         "text" : "In the wake of #MeToo, male victims of sexual harassment say there is still a long way to go.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 2,
+         "text" : "The ultimate karma for media critics of Stuff’s #metoo campaign will be when they are forced to follow up the stories that come out of it.",
+         "tones" : [
+            {
+               "score" : 0.537984,
+               "tone_id" : "joy",
+               "tone_name" : "Joy"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 3,
+         "text" : "Wake up.",
+         "tones" : [
+            {
+               "score" : 0.913043,
+               "tone_id" : "fear",
+               "tone_name" : "Fear"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 4,
+         "text" : "If men can't protect us, WE CAN PROTECT OUR OURSELVES make a change, do something, anything.",
+         "tones" : [
+            {
+               "score" : 0.868982,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            },
+            {
+               "score" : 0.88939,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 5,
+         "text" : "every second counts.",
+         "tones" : [
+            {
+               "score" : 0.989586,
+               "tone_id" : "confident",
+               "tone_name" : "Confident"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 6,
+         "text" : "#MeToo The #MeToo movement still has a ways to go, especially in the workplace.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 7,
+         "text" : "A new Harris Poll found that 23 percent of men in countries across the world thought it was sometimes or always acceptable for an employer to expect sex from an employee.",
+         "tones" : [
+            {
+               "score" : 0.693439,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 8,
+         "text" : "More It is true that mediocre starlets rise up in Hollywood using their Sexual Currency and then cry #MeToo when they turn into old and washed-up rejects.",
+         "tones" : [
+            {
+               "score" : 0.647635,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            },
+            {
+               "score" : 0.6736799999999999,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 9,
+         "text" : "That's the truth.",
+         "tones" : [
+            {
+               "score" : 0.942582,
+               "tone_id" : "confident",
+               "tone_name" : "Confident"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 10,
+         "text" : "Hey men, I get the feeling sometimes you think feminism or #metoo holds you to some impossible standard.",
+         "tones" : [
+            {
+               "score" : 0.547329,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            },
+            {
+               "score" : 0.747994,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            },
+            {
+               "score" : 0.913819,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 11,
+         "text" : "My humble opinion is it's actually quite easy.Don't sexually harass or abuse 2. Do not enable abuse or abusers 3. Treat evidence rationally.",
+         "tones" : [
+            {
+               "score" : 0.514828,
+               "tone_id" : "joy",
+               "tone_name" : "Joy"
+            },
+            {
+               "score" : 0.722126,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            },
+            {
+               "score" : 0.723305,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 12,
+         "text" : "I am so fed up of this ME TOO movement.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 13,
+         "text" : "Even the Chinese Government is clamping down on #MeToo thank God as it’s now become a political movement for left wing and liberal opportunists.",
+         "tones" : [
+            {
+               "score" : 0.511585,
+               "tone_id" : "joy",
+               "tone_name" : "Joy"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 14,
+         "text" : "People who use #MeToo for personal gain, deserve suspension.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 15,
+         "text" : "I remember my mom telling me the era of #MeToo would quickly turn into a joke.",
+         "tones" : [
+            {
+               "score" : 0.506763,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 16,
+         "text" : "Not that she wanted it to, but that eventually it would backfire and it will be forgotten.",
+         "tones" : [
+            {
+               "score" : 0.787368,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 17,
+         "text" : "Let’s keep pushing and make sure it’s not.",
+         "tones" : [
+            {
+               "score" : 0.898327,
+               "tone_id" : "confident",
+               "tone_name" : "Confident"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 18,
+         "text" : "I’d like to prove my mother wrong in the best way possible.",
+         "tones" : [
+            {
+               "score" : 0.672469,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            },
+            {
+               "score" : 0.75152,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 19,
+         "text" : "How dare @enews post the photos of Amanda Bynes.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 20,
+         "text" : "As an organization that constantly supports the #MeToo movement, the hypocrisy.",
+         "tones" : [
+            {
+               "score" : 0.579436,
+               "tone_id" : "confident",
+               "tone_name" : "Confident"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 21,
+         "text" : "The poorly timed photos and terrible angles degrade everything she has worked for.",
+         "tones" : [
+            {
+               "score" : 0.7053700000000001,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 22,
+         "text" : "Shame on you.",
+         "tones" : [
+            {
+               "score" : 1,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            },
+            {
+               "score" : 0.931034,
+               "tone_id" : "fear",
+               "tone_name" : "Fear"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 23,
+         "text" : "Let us all be critical.",
+         "tones" : [
+            {
+               "score" : 0.961633,
+               "tone_id" : "confident",
+               "tone_name" : "Confident"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 24,
+         "text" : "Please.",
+         "tones" : [
+            {
+               "score" : 0.880435,
+               "tone_id" : "joy",
+               "tone_name" : "Joy"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 25,
+         "text" : "The issues involved in the #MeToo movements are very sensitive and need the utmost inspection and logical judgement.",
+         "tones" : [
+            {
+               "score" : 0.724236,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            },
+            {
+               "score" : 0.660207,
+               "tone_id" : "confident",
+               "tone_name" : "Confident"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 26,
+         "text" : "I wish #MeToo was rapists and assailants admitting to being trash humans instead of survivors having to bare their souls.",
+         "tones" : [
+            {
+               "score" : 0.545299,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 27,
+         "text" : "I was a child too scared to speak.",
+         "tones" : [
+            {
+               "score" : 0.9159620000000001,
+               "tone_id" : "fear",
+               "tone_name" : "Fear"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 28,
+         "text" : "Though the anxiety and blame still haunt me, I am no longer that child.",
+         "tones" : [
+            {
+               "score" : 0.747733,
+               "tone_id" : "fear",
+               "tone_name" : "Fear"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 29,
+         "text" : "I will not be silent.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 30,
+         "text" : "#MeToo It happens every minute, every day.",
+         "tones" : [
+            {
+               "score" : 0.984135,
+               "tone_id" : "confident",
+               "tone_name" : "Confident"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 31,
+         "text" : "Stop pretending it happens to other people.",
+         "tones" : [
+            {
+               "score" : 0.673632,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 32,
+         "text" : "Stop telling men it is ok #MeToo i hope i live long enough to see the day when my female friends are writing #MeToo on social media to mean i finally feel safe in the world.",
+         "tones" : [
+            {
+               "score" : 0.64462,
+               "tone_id" : "joy",
+               "tone_name" : "Joy"
+            },
+            {
+               "score" : 0.5489039999999999,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 33,
+         "text" : "It’s breaking my heart how many #MeToo I see trending by women who have been victims of sexual assault.",
+         "tones" : [
+            {
+               "score" : 0.501393,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 34,
+         "text" : "This shit has got to stop!",
+         "tones" : [
+            {
+               "score" : 0.820455,
+               "tone_id" : "anger",
+               "tone_name" : "Anger"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 35,
+         "text" : "If you’ve been sexually harassed or assaulted write ‘me too’ as a reply to this tweet.",
+         "tones" : [
+            {
+               "score" : 0.506763,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            },
+            {
+               "score" : 0.615352,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 36,
+         "text" : "We know one thing!",
+         "tones" : [
+            {
+               "score" : 0.920855,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 37,
+         "text" : "They’ve all accused the Harasser-In-Chief  of sexual harassment.",
+         "tones" : [
+            {
+               "score" : 0.6606379999999999,
+               "tone_id" : "anger",
+               "tone_name" : "Anger"
+            },
+            {
+               "score" : 0.898327,
+               "tone_id" : "confident",
+               "tone_name" : "Confident"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 38,
+         "text" : "And as a woman who’s suffered this fate, I believe them.",
+         "tones" : [
+            {
+               "score" : 0.832087,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            },
+            {
+               "score" : 0.786991,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 39,
+         "text" : "It’s not about money.",
+         "tones" : [
+            {
+               "score" : 0.88939,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 40,
+         "text" : "It’s about the truth and having your voice be heard #MeToo.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 41,
+         "text" : "We have to recognize that it’s 2018 and that the #MeToo movement is here to stay so when you face sexual harassment in your reporting, shut it down then and decide if it’s worth keeping in your story later Meanwhile the #metoo celebrities are turning the other way.",
+         "tones" : [
+            {
+               "score" : 0.750047,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 42,
+         "text" : "The #MeToo movement is growing rapidly in Korea.",
+         "tones" : [
+            {
+               "score" : 0.623395,
+               "tone_id" : "joy",
+               "tone_name" : "Joy"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 43,
+         "text" : "An actor was found dead by hanging after being accused by 8 women.",
+         "tones" : [
+            {
+               "score" : 0.503619,
+               "tone_id" : "anger",
+               "tone_name" : "Anger"
+            },
+            {
+               "score" : 0.589295,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 44,
+         "text" : "Good luck to all the entertainment executives, producers, and directors who made this practice a norm in your industry.",
+         "tones" : [
+            {
+               "score" : 0.52724,
+               "tone_id" : "joy",
+               "tone_name" : "Joy"
+            },
+            {
+               "score" : 0.527318,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 45,
+         "text" : "Hey miley Cyrus how is that #MeToo movement working out?",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 46,
+         "text" : "Are you for it or against it.",
+         "tones" : [
+            {
+               "score" : 0.91961,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 47,
+         "text" : "Kinda hard to tell.",
+         "tones" : [
+            {
+               "score" : 0.6296580000000001,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            },
+            {
+               "score" : 0.984352,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 48,
+         "text" : "Crashing?",
+         "tones" : [
+            {
+               "score" : 0.916667,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            },
+            {
+               "score" : 0.931034,
+               "tone_id" : "fear",
+               "tone_name" : "Fear"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 49,
+         "text" : "Aren’t you my opener who is getting paid?",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 50,
+         "text" : "Am I a wedding?",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 51,
+         "text" : "Super confused.",
+         "tones" : [
+            {
+               "score" : 0.773081,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            },
+            {
+               "score" : 0.998976,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 52,
+         "text" : "I understand how you want to disassociate with someone who you’ve seen get 3 standing ovations so far this weekend tho.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 53,
+         "text" : "I get it #metoo I never, ever want to hear again that Harris supports #MeToo or that he is an ally to women.",
+         "tones" : [
+            {
+               "score" : 0.541591,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 54,
+         "text" : "The contempt he shows for women’s intelligence and integrity and his abject disregard for how sexual harassment short of “rape at knifepoint” harms women in the statement are sickening.",
+         "tones" : [
+            {
+               "score" : 0.633185,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 55,
+         "text" : "Two New Polls on International Women’s Day Show Changing Attitudes Toward the Global #MeToo Movement the whole korea is shaking now that the #MeToo movement is rising I know far too many teenage girls who can say #metoo and that disgusts and terrifies me.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 56,
+         "text" : "No one, especially not teenagers should have to deal with that.",
+         "tones" : [
+            {
+               "score" : 0.7675920000000001,
+               "tone_id" : "confident",
+               "tone_name" : "Confident"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 57,
+         "text" : "There are so many dating rumors it feels like they are trying to bury the #metoo movement When I was about 12, I got groped in a marketplace in Lahore.",
+         "tones" : [
+            {
+               "score" : 0.647986,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 58,
+         "text" : "Years later at a sleepover I shared the story with my girl friends, and every single one of them had had something similar or worse happen to them.",
+         "tones" : [
+            {
+               "score" : 0.606455,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 59,
+         "text" : "#MeToo never came as a surprise; it brought only sick familiarity.",
+         "tones" : [
+            {
+               "score" : 0.541591,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            },
+            {
+               "score" : 0.579436,
+               "tone_id" : "confident",
+               "tone_name" : "Confident"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 60,
+         "text" : "This #InternationalWomensDay I’m thinking of the women who are unable to say #MeToo because it is too painful to discuss, it would risk their jobs, or endanger their lives.",
+         "tones" : [
+            {
+               "score" : 0.725842,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            },
+            {
+               "score" : 0.574817,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 61,
+         "text" : "People with disabilities are often excluded from conversations about sexual violence & #MeToo, in part because they're routinely desexualized by the media & in public life.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 62,
+         "text" : "I really fucking need to stop hearing people—especially men—say that #MeToo doesn’t distinguish between clumsy flirting and rape, and that talking about non-criminal kinds of harassment diminishes real victims.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 63,
+         "text" : "If I hear either of these from you, I know you’re not an ally.",
+         "tones" : [
+            {
+               "score" : 0.560098,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 64,
+         "text" : "No the #metoo movement hasn’t killed flirting.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 65,
+         "text" : "If your idea of flirty involves forcing yourself on an unwilling person then you got 99 problems & romance isn't one.",
+         "tones" : [
+            {
+               "score" : 0.85365,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 66,
+         "text" : "Nope, we not playing this game in 2018.",
+         "tones" : [
+            {
+               "score" : 0.61209,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 67,
+         "text" : "Because if he doesn't ask, next thing you know it's sexual assault and #metoo .",
+         "tones" : [
+            {
+               "score" : 0.895415,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 68,
+         "text" : "Don't fall for this fellas.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 69,
+         "text" : "Dear Hillary, it’s disingenuous of you to blame Russia and Comey for your presidential loss.",
+         "tones" : [
+            {
+               "score" : 0.610751,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 70,
+         "text" : "You lost because Millenial women found out how you vilified what would have been #metoo victims of your husband’s predatory philandering, and voted against you.",
+         "tones" : [
+            {
+               "score" : 0.512126,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            },
+            {
+               "score" : 0.60456,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 71,
+         "text" : "Everyone I know has a #MeToo moment.",
+         "tones" : [
+            {
+               "score" : 0.513692,
+               "tone_id" : "joy",
+               "tone_name" : "Joy"
+            },
+            {
+               "score" : 0.801827,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 72,
+         "text" : "Thank you for the courage to share yours!",
+         "tones" : [
+            {
+               "score" : 0.940704,
+               "tone_id" : "joy",
+               "tone_name" : "Joy"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 73,
+         "text" : "#MeToo campaign may change university culture, students say.",
+         "tones" : [
+            {
+               "score" : 0.88939,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 74,
+         "text" : "After being at a conference this past week and having a completely inappropriate gesture made towards me in a hospitality room... I'm going to go with yes.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 75,
+         "text" : "#wemustdobetter #metoo.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 76,
+         "text" : "seriously?",
+         "tones" : [
+            {
+               "score" : 0.895349,
+               "tone_id" : "sadness",
+               "tone_name" : "Sadness"
+            },
+            {
+               "score" : 0.996934,
+               "tone_id" : "confident",
+               "tone_name" : "Confident"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 77,
+         "text" : "You just shifted your answer to a very important question about #MeToo, and sexual harassment in politics to nomination issues?",
+         "tones" : [
+            {
+               "score" : 0.882284,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 78,
+         "text" : "Cmon, be better than that.",
+         "tones" : [
+            {
+               "score" : 0.578514,
+               "tone_id" : "joy",
+               "tone_name" : "Joy"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 79,
+         "text" : "I feel stronger just knowing that there are others like me #MeToo.",
+         "tones" : [
+            {
+               "score" : 0.664054,
+               "tone_id" : "joy",
+               "tone_name" : "Joy"
+            },
+            {
+               "score" : 0.620279,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            },
+            {
+               "score" : 0.946222,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 80,
+         "text" : "I graduated from Harvard.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 81,
+         "text" : "I too have experienced sexual harassment, some from a visiting professor.",
+         "tones" : [
+            {
+               "score" : 0.786991,
+               "tone_id" : "tentative",
+               "tone_name" : "Tentative"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 82,
+         "text" : "None of us are free from this #MeToo Women are finding their voice!",
+         "tones" : [
+            {
+               "score" : 0.609527,
+               "tone_id" : "joy",
+               "tone_name" : "Joy"
+            },
+            {
+               "score" : 0.589295,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 83,
+         "text" : "Don't know of a woman who can't say #metoo.",
+         "tones" : [
+            {
+               "score" : 0.724236,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 84,
+         "text" : "Men and women , we are not alone.",
+         "tones" : []
+      },
+      {
+         "sentence_id" : 85,
+         "text" : "I didn’t think one night of fun would turn into days of terror.",
+         "tones" : [
+            {
+               "score" : 0.79878,
+               "tone_id" : "fear",
+               "tone_name" : "Fear"
+            },
+            {
+               "score" : 0.589295,
+               "tone_id" : "analytical",
+               "tone_name" : "Analytical"
+            }
+         ]
+      },
+      {
+         "sentence_id" : 86,
+         "text" : "#metoo",
+         "tones" : []
+      }
+   ]
+}
+
