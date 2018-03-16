@@ -13,8 +13,10 @@ place::place(std::string nameIn, float angleIn, float distanceIn, std::string ad
     timeVector = timeVectorIn;
     currDay = currDayIn;
 
+    //calculate origin as point on a circle, using place distance and heading
     origin = ofPoint((distance * cos(angle * DEG_TO_RAD)) + ofGetWindowWidth()/2, (distance * sin(angle * DEG_TO_RAD)) + ofGetWindowHeight()/2);
 
+    //copy hour data from extracted json to class variable
     for (int i = 0; i < timeVector.size(); i++) {
         vector<int> dayData;
         dayData.reserve(24);
@@ -32,6 +34,7 @@ place::place(std::string nameIn, float angleIn, float distanceIn, std::string ad
 
     }
 
+    //initialize colors and settings
     ofSetBackgroundColor(255, 255, 255);
     ring.setColor(color);
     ring.setCircleResolution(1000);
@@ -45,18 +48,6 @@ place::place(std::string nameIn, float angleIn, float distanceIn, std::string ad
     dividers.setStrokeWidth(1);
     dividers.setFilled(false);
     dividers.setCircleResolution(1000);
-
-    // cout << timeVectorProcessed.size() << endl;
-
-}
-
-bool place::operator< (const place key) {
-    if (!expanded and key.expanded) {
-        return true;
-    }
-    else {
-        return false;
-    }
 }
 
 void place::setup()
@@ -65,33 +56,37 @@ void place::setup()
 
 void place::update() {
 
+    //update origin in case window size changes
     origin = ofPoint((distance * cos(angle * DEG_TO_RAD)) + ofGetWindowWidth()/2, (distance * sin(angle * DEG_TO_RAD)) + ofGetWindowHeight()/2);
 
+    //clear all paths
     ring.clear();
     backgroundRing.clear();
     backgroundHighlight.clear();
     dividers.clear();
     ticks.clear();
 
-    // cout << timeVectorProcessed[currDay].size() << endl;
-
+    //generate background ring
     ofPoint backgroundRingStart = ofPoint(drawRadius * cos(0 * DEG_TO_RAD) + origin.x, drawRadius * sin(0 * DEG_TO_RAD) + origin.y);
     backgroundRing.moveTo(backgroundRingStart);
     backgroundRing.arc(origin, drawRadius, drawRadius, 0, 360);
     backgroundRing.arcNegative(origin, drawRadius+ringHeight, drawRadius+ringHeight, 360, 0);
     backgroundRing.close();
 
+    //generate background outline
     ofPoint backgroundHighlightStart = ofPoint((drawRadius + ringHeight) * cos(0 * DEG_TO_RAD) + origin.x, (drawRadius + ringHeight) * sin(0 * DEG_TO_RAD) + origin.y);
     backgroundHighlight.moveTo(backgroundHighlightStart);
     backgroundHighlight.arc(origin, drawRadius + ringHeight, drawRadius + ringHeight, 0, 360);
     backgroundHighlight.close();
 
+    //generate heightmap for each hour
     for (int i = 0; i < timeVectorProcessed[currDay].size(); i++) {
 
             int popularity = ofMap(timeVectorProcessed[currDay][i], 0, 100, 0, ringHeight);
 
             ofPoint startPoint = ofPoint(drawRadius * cos(((i * 15)-90) * DEG_TO_RAD) + origin.x, drawRadius * sin(((i * 15)-90) * DEG_TO_RAD) + origin.y);
 
+            //create hour indicator
             ring.moveTo(startPoint);
             ring.arc(origin, drawRadius, drawRadius, (i*15)-90, ((i+1)*15)-90);
             ring.arcNegative(origin, drawRadius+popularity, drawRadius+popularity, ((i+1)*15)-90, (i*15)-90);
@@ -100,6 +95,7 @@ void place::update() {
             ofPoint lineStart = ofPoint(drawRadius * cos((((i + 1) * 15)-90) * DEG_TO_RAD) + origin.x, drawRadius * sin((((i + 1) * 15)-90) * DEG_TO_RAD) + origin.y);
             ofPoint lineEnd = ofPoint((drawRadius + popularity) * cos((((i + 1) * 15)-90) * DEG_TO_RAD) + origin.x, (drawRadius + popularity) * sin((((i + 1) * 15)-90) * DEG_TO_RAD) + origin.y);
 
+            //create hour divider
             dividers.moveTo(lineStart);
             dividers.lineTo(lineEnd);
             dividers.arcNegative(origin, drawRadius + popularity, drawRadius + popularity, ((i + 1) * 15)-90, (i * 15)-90);
@@ -107,14 +103,14 @@ void place::update() {
             lineEnd = ofPoint(drawRadius * cos(((i * 15)-90) * DEG_TO_RAD) + origin.x, drawRadius * sin(((i * 15)-90) * DEG_TO_RAD) + origin.y);
 
             dividers.lineTo(lineEnd);
-
-            // dividers.close();
+            dividers.close();
 
     }
 }
 
 void place::draw()
 {
+    //render non-mousover shape
     if (expanded == false) {
         ofSetColor(color);
         ofDrawCircle(origin, detectRadius);
@@ -125,11 +121,13 @@ void place::draw()
         ofDrawBitmapString(name, origin);
         ofPopMatrix();
     }
+    //render mouseover shape
     else {
         backgroundRing.draw();
         backgroundHighlight.draw();
         ring.draw();
 
+        //generate background 0, 6, 12, 18 hour markers
         for (int i = 0; i < 4; i++) {
             ofDrawLine(
                 ofPoint(drawRadius * cos(i * 90 * DEG_TO_RAD) + origin.x, drawRadius * sin(i * 90 * DEG_TO_RAD) + origin.y), 
@@ -148,45 +146,3 @@ void place::draw()
 
     
 }
-
-// void place::draw()
-// {
-//     ofPushMatrix();
-//         ofTranslate(ofGetWindowWidth()/2, ofGetWindowHeight()/2);
-//         ofSetColor(0, 255, 0);
-//         ofDrawCircle(0, 0, 10);
-
-//             ofPushMatrix();
-//             ofRotate(angle-90);
-//             ofTranslate((int)distance*2, 0);
-
-//             if (expanded == false) {
-//                 ofDrawCircle(0, 0, drawRadius);
-//             }
-//             else {
-            
-
-//                 ofPushMatrix();
-//                 ofRotate(-(angle-90));
-
-//                     ofPushMatrix();
-//                     ofRotate(-90);
-//                     backgroundRing.draw();
-//                     backgroundHighlight.draw();
-//                     ring.draw();
-//                     dividers.draw();
-//                     ofPopMatrix();
-
-//                     ofPushMatrix();
-//                     ofTranslate(drawRadius+5, drawRadius/2);
-//                     ofSetColor(0, 0, 0);
-//                     ofDrawBitmapString(name, origin);
-//                     ofPopMatrix();
-
-//                 ofPopMatrix();
-//             }
-
-//             ofPopMatrix();
-
-//     ofPopMatrix();
-// }
