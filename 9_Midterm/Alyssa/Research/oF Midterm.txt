@@ -1,0 +1,44 @@
+Data set: https://data.cityofnewyork.us/City-Government/LinkNYC-Usage-Statistics/69wu-b929
+
+Data viz precedents:
+https://www.cloudred.com/labprojects/nyctrees/
+http://www.jillhubley.com/project/nyctrees/#PIST
+
+
+Internet is a human right according to the UN. 
+https://www.wired.com/2011/06/internet-a-human-right/
+
+Municipal broadband as savior in times of zero net neutrality?
+https://techcrunch.com/2018/01/04/can-municipal-broadband-save-the-open-internet/
+
+
+What is LinkNYC?
+“LinkNYC is a massive communications project that promises to bring up to 10,000 public information terminals to NYC streets. If the program rolls out as planned, it will bring free wifi at up to gigabit speeds to the public, which would make it the among the fastest municipal internet connections in the world.”
+
+“LinkNYC's network will be powered by 10,000 tablet-like terminals, or "Links", that will provide free wifi access within 150 feet, free charging for electronic devices, free domestic phone calls, and access to city services like 311. The most notable part of the program? It'll come at zero cost to taxpayers, being totally supported by ad revenue.”
+https://motherboard.vice.com/en_us/article/mgbyjb/what-the-linknyc-project-means-for-the-average-new-yorker
+
+
+
+Why LinkNYC?
+Break the digital divide. 
+
+"LinkNYC is to help break down the digital divide. According to a 2015 report from the NYC Bureau of Policy and Research, about a quarter of NYC households lack broadband internet at home, and 32 percent of people outside the workforce lack broadband at home. 
+
+It is worth noting, however, that only 700 of the planned 7,500 Links are to be installed in the Bronx, the borough with the highest percentage of households without broadband. This raises the question of just how central the digital divide is to the mission of LinkNYC, or whether it is just the piece that seems sexiest to emphasize.”
+https://motherboard.vice.com/en_us/article/vv7pw3/linknyc-is-bringing-internet-to-new-yorks-most-disconnected-people
+
+
+Concerns
+
+PRIVACY
+“The privacy policy, while robust, still allows Intersection and its partners to sell your browsing information to other advertisers, and the Wifi networks "do not support Do Not Track requests at this time." Users who agree to the terms and use the Links will have to trust the enforcement policies DoITT to protect their information. That is a risk, and it's a risk that could easily fall more heavily on lower income New Yorkers. The massive advertising operation that will pay for all 10,000 Links—and the potential for abuse that comes along with it— has to be weighed against the huge distribution of access of an essential utility like the internet.
+
+A privacy policy has been released by DoITT, available in full here, detailing the terms and conditions of accessing Wifi over a Link, and what kind of information they are allowed to store about users. It claims that all the informations users will provide to access the networks are a username, password, and email address.
+A closer look also reveals that CityBridge may collect, "MAC address, IP address, browser type and version, time zone setting, browser plug-in types and versions, operating system and platform, device type, and device identifiers….Information about your visits to websites we provide, including the full URL clickstream to, through and from these websites (including date and time)," though only in an "an aggregate or anonymous manner." While the agreement stresses that metadata will be collected in aggregate, we've seen before that metadata can provide a surprising level of insight into a person's behavior.”
+https://motherboard.vice.com/en_us/article/mgbyjb/what-the-linknyc-project-means-for-the-average-new-yorker
+
+VOLUME
+They have also responded to complaints about noise from the speaker by reprogramming the unit so it only goes to 50 percent volume at night.
+http://newyork.cbslocal.com/2016/06/13/free-wi-fi-kiosks/
+
