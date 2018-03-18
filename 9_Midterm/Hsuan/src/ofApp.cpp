@@ -27,6 +27,7 @@ void ofApp::setup(){
     bigTide.setLoop(true);
     
     
+    //using ofxAddon:ofxGui
     gui.setup();
     gui.add(date.setup("date", 0, 0, 13));
     gui.add(time.setup("time", 0, 0, 4));// 00/06/12/18
@@ -62,6 +63,7 @@ float fish_catchUpSpeed = 0.01f;
 
 
 void ofApp::update(){
+    //Easing-out: simulate the fishing
       fish_posx += fish_catchUpSpeed * (rod_posx - fish_posx);
 }
 
@@ -70,19 +72,26 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
+    //Here change background according to the time
+    // 1st/2nd/3rd/4th tide
+    //because the api keeps updating
+    //so the order will mess up after the presentation day
     if(time==0){
-        ofBackground(77,98,129);
-    }else if(time == 1){
         ofBackground(170,215,238);
-    }else if(time == 2){
+    }else if(time == 1){
         ofBackground(229,232,237);
-    }else{
+    }else if(time == 2){
         ofBackground(102,156,192);
+    }else{
+        ofBackground(77,98,129);
     }
     
+    //because the api keeps updating
+    //so the order will mess up after the presentation day
     gui.draw();
-    
 
+    
+    //four times tide in a day
     string DateTime = json["extremes"][date*4+time]["date"].asString();
     font.drawString("Fishing in New York City", 300, 50);
     font.drawString("Date & Time:", 300,100);
