@@ -158,6 +158,7 @@ void ofApp::drawTide(int a, int b, int red, int green, int blue){
     
     ofBeginShape();
     for(int x=0; x<ofGetWidth()+a; x++) {
+        //draw wave according to the height from api
         ofCurveVertex(x-a, b + 100*height* sin(x*0.01f + ofGetFrameNum() * 0.02f));
     }
     ofEndShape(false);
