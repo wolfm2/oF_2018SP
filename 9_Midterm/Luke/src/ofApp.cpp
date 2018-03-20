@@ -3,6 +3,11 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
+
+    //load assets
+    sound.loadSound("alert.wav");
+    font.loadFont("Roboto-Regular.ttf", 10);
+
     //load data from file
     bool parsingSuccessful = json.open("places_as_json.json");
 
@@ -70,15 +75,45 @@ void ofApp::update()
     {
         if (abs(ofDist(mouseX, mouseY, placeList[i].origin.x, placeList[i].origin.y)) < placeList[i].detectRadius && !changed) {  
             placeList[i].expanded = true;
-            swap(placeList[i], placeList[placeList.size()-1]);
+            placeList[i].newDrawRadius = 50;
+            placeList[i].newRingHeight = 25;
             changed = true;
             break;
         }
         else {
-            placeList[i].expanded = false;
+            placeList[i].newDrawRadius = 0;
+            placeList[i].newRingHeight = 0;
         }
+    }
 
+    for (int i = 0; i < placeList.size(); i++)
+    {
         placeList[i].update();
+    }
+
+    //if mouseover make circles more transparent
+    if (changed) {
+        for (int i = 0; i < placeList.size(); i++) {
+            if (!placeList[i].expanded) {
+                placeList[i].color.a = 128;
+            }
+        }
+    }
+
+    else {
+        for (int i = 0; i < placeList.size(); i++) {
+            placeList[i].color.a = 255;
+        }
+    }
+
+    //play sound if rollover happens
+    if (changed && !soundState) {
+        sound.play();
+        soundState = !soundState;
+    }
+
+    if (!changed && soundState) {
+        soundState = !soundState;
     }
 }
 
@@ -92,7 +127,7 @@ void ofApp::draw()
 
     for (int i = 0; i < placeList.size(); i++)
     {
-        placeList[i].draw();
+        placeList[i].draw(&font);
     }
 }
 

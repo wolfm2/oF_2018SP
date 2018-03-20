@@ -56,6 +56,8 @@ void place::setup()
 
 void place::update() {
 
+    easing();
+
     //update origin in case window size changes
     origin = ofPoint((distance * cos(angle * DEG_TO_RAD)) + ofGetWindowWidth()/2, (distance * sin(angle * DEG_TO_RAD)) + ofGetWindowHeight()/2);
 
@@ -108,7 +110,7 @@ void place::update() {
     }
 }
 
-void place::draw()
+void place::draw(ofTrueTypeFont * font)
 {
     //render non-mousover shape
     if (expanded == false) {
@@ -118,7 +120,7 @@ void place::draw()
         ofPushMatrix();
         ofTranslate(detectRadius, detectRadius/2);
         ofSetColor(0, 0, 0);
-        ofDrawBitmapString(name, origin);
+        font->drawString(name, origin.x, origin.y);
         ofPopMatrix();
     }
     //render mouseover shape
@@ -140,9 +142,28 @@ void place::draw()
         ofPushMatrix();
         ofTranslate(drawRadius+ringHeight, ringHeight + drawRadius/2);
         ofSetColor(0, 0, 0);
-        ofDrawBitmapString(name, origin);
+        font->drawString(name, origin.x, origin.y);
         ofPopMatrix();
     }
+}
 
-    
+//easing
+void place::easing()
+{
+    if (drawRadius != newDrawRadius)
+    {
+        drawRadius += 0.1 * (newDrawRadius - drawRadius);
+    }
+
+    if (ringHeight != newRingHeight)
+    {
+        ringHeight += 0.1 * (newRingHeight - ringHeight);
+    }
+
+    if (drawRadius < detectRadius && ringHeight < detectRadius && expanded)
+    {
+        drawRadius = detectRadius;
+        ringHeight = detectRadius;
+        expanded = false;
+    }
 }

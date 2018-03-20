@@ -24,7 +24,10 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
+		ofTrueTypeFont font;
 		ofxJSONElement json;
 		vector<place> placeList;
 		bool changed = false;
+		ofSoundPlayer sound;
+		bool soundState = false;
 };
