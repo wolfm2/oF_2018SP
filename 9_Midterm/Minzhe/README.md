@@ -7,7 +7,8 @@ The three sensors I used to visualize the data is light, sound and temperature s
 
 ## The requirement I fulfilled
 * Matrix
-* Arduino
+* Arduino: Adafruit circuit playground
+![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 * Alpha Channels
 * Shape changing
 * Movement
