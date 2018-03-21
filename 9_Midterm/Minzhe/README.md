@@ -30,19 +30,19 @@ The three sensors I used to visualize the data is light, sound and temperature s
 
 ## Extra Work:
 
-I change the raw data with noise into the linear data I want. ofApp.cpp: 62
-I used some function that we didn't cover in class:
-ofNoise: ofApp.cpp: 121
-glPushMatrix glPopMatrix ofApp.cpp:83
-ofBeginShape ofEndShape ofApp.cpp:180
-Particle system ofApp.h: 27
+* I change the raw data with noise into the linear data I want. ofApp.cpp: 62
+* I used some function that we didn't cover in class:
+  * ofNoise: ofApp.cpp: 121
+  * glPushMatrix glPopMatrix ofApp.cpp:83
+  * ofBeginShape ofEndShape ofApp.cpp:180
+  * Particle system ofApp.h: 27
 
 ## Questions/Comments:
 I set the linewidth so that I  can change the stroke of these organic curves, but I don't know how to get rid of the sharp edge at the curving joints to make my curves smooth.
 
-## Authors
+## Author
 
-* **Minzhe Jiang** 
+ **Minzhe Jiang** 
 
 
 
