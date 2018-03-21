@@ -1,5 +1,5 @@
 #include "ofApp.h"
-ofImage leaf;
+ofImage asteroid;
 
 int x=0;
 ofImage galaxy;
@@ -11,7 +11,7 @@ Boolean keyyyy = false;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    leaf.load("asteroid1.png");
+    asteroid.load("asteroid1.png");
     //galaxy.load("4.png");
     //galaxy.load("3.png");
        galaxy.load("6.png");
@@ -109,7 +109,7 @@ void ofApp::draw(){
         //    radius= (dia/2100)*1024;
         //    ofSetColor(255);
           // leaf.draw(x, 300,radius,radius);
-        leaf.draw(x, 300,50,100);
+      asteroid.draw(x, 300,50,100);
         
     }
     // else{x=0;}
