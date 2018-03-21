@@ -87,9 +87,8 @@ void ofApp::draw(){
     std::stringstream ss;
     
     ss << "Date            = " << "2018-03-15" << std::endl;
-    ss << "Number          = " << result["near_earth_objects"]["2018-03-15"][num]["neo_reference_id"].asString()<< std::endl;
     ss << "Neo Id          = " << result["near_earth_objects"]["2018-03-15"][num]["neo_reference_id"].asString()<< std::endl;
-    ss << "Diameter         = " << result["near_earth_objects"]["2018-03-15"][num]["estimated_diameter"]["meters"]["estimated_diameter_min"].asString() << "  Meters" <<std::endl;
+   
     
    // dia =  result["near_earth_objects"]["2018-03-15"][num]["estimated_diameter"]["meters"]["estimated_diameter_min"].asFloat();
 //     ofDrawBitmapString(dia , 30,100);
