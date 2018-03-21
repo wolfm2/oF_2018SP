@@ -31,7 +31,7 @@ The three sensors I used to visualize the data is light, sound and temperature s
 ## Extra Work:
 
 * I change the raw data with noise into the linear data I want. ofApp.cpp: 62
-* I used some function that we didn't cover in class:
+* I used some functions that we didn't cover in class:
   * ofNoise: ofApp.cpp: 121
   * glPushMatrix glPopMatrix ofApp.cpp:83
   * ofBeginShape ofEndShape ofApp.cpp:180
