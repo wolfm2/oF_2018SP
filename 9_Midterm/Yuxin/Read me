@@ -1,0 +1,29 @@
+Fireflies play
+
+For my midterm project, I was inspired by fireflies. I myself have never seen lots of fireflies at the same time in the city,
+and I always feel that urban people lack such a chance to interact with fireflies.
+Hence, I’m trying use particle systems, leap motion as well as weather Api in the openFramework to create an scene where users 
+could interact with fireflies by their hands.
+
+Technical part
+1. leapmotion addon
+2. openframework
+3. Dark Sky Api
+
+
+The requirement I fulfilled
+Api
+Sound
+Movement
+Easing
+FBO
+Drawing 
+Fonts & Writing 
+An ofxAddon not covered in class  (leapmotion)
+A Web API
+Interaction
+A presentation
+
+Further steps:
+1. add sounds for the night
+2. think about it in a large scale
