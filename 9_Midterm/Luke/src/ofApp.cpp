@@ -4,16 +4,17 @@
 void ofApp::setup()
 {
 
-    // string url = "https://www.google.com/search?q=regal+union+square";
+    //load assets
+    sound.loadSound("alert.wav");
+    font.loadFont("Roboto-Regular.ttf", 10);
 
-    // bool parsingSuccessful = json.open(url);
+    //load data from file
     bool parsingSuccessful = json.open("places_as_json.json");
 
     cout << parsingSuccessful << endl;
 
     if (parsingSuccessful)
     {
-        // ofLogNotice("ofApp::setup") << json.getRawString(true);
         ofLogNotice("ofApp::setup") << "Loaded JSON.";
     }
     else
@@ -21,15 +22,15 @@ void ofApp::setup()
         ofLogNotice("ofApp::setup") << "Failed to parse JSON.";
     }
 
+    //get current day
     const string DAY[] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     time_t rawtime;
     tm *timeinfo;
     time(&rawtime);
     timeinfo = localtime(&rawtime);
     int wday = timeinfo->tm_wday;
-    // cout << "Today is: " << wday << endl;
-    // cout << "Today is: " << DAY[wday] << endl;
 
+    //extract hourly data from json data structure
     for (int i = 0; i < json.size(); i++)
     {
         vector<vector<vector<int>>> timeVector;
@@ -40,9 +41,6 @@ void ofApp::setup()
             for (int j = 0; j < json[i]["timeData"].size(); j++)
             {
                 vector<vector<int>> tempDayVector;
-
-                // cout << json[i]["name"] << endl;
-                // cout << json[i]["timeData"][j][1] << endl;
 
                 if (!json[i]["timeData"][j][1].isNull()) {
 
@@ -72,23 +70,51 @@ void ofApp::update()
 
     changed = false;
 
+    //mouseover detection
     for (int i = 0; i < placeList.size(); i++)
     {
         if (abs(ofDist(mouseX, mouseY, placeList[i].origin.x, placeList[i].origin.y)) < placeList[i].detectRadius && !changed) {  
             placeList[i].expanded = true;
-            swap(placeList[i], placeList[placeList.size()-1]);
+            placeList[i].newDrawRadius = 50;
+            placeList[i].newRingHeight = 25;
             changed = true;
             break;
         }
         else {
-            placeList[i].expanded = false;
+            placeList[i].newDrawRadius = 0;
+            placeList[i].newRingHeight = 0;
         }
+    }
 
+    for (int i = 0; i < placeList.size(); i++)
+    {
         placeList[i].update();
     }
-    // if (changed) {
-    //     sort(placeList.begin(), placeList.end());
-    // }
+
+    //if mouseover make circles more transparent
+    if (changed) {
+        for (int i = 0; i < placeList.size(); i++) {
+            if (!placeList[i].expanded) {
+                placeList[i].color.a = 128;
+            }
+        }
+    }
+
+    else {
+        for (int i = 0; i < placeList.size(); i++) {
+            placeList[i].color.a = 255;
+        }
+    }
+
+    //play sound if rollover happens
+    if (changed && !soundState) {
+        sound.play();
+        soundState = !soundState;
+    }
+
+    if (!changed && soundState) {
+        soundState = !soundState;
+    }
 }
 
 //--------------------------------------------------------------
@@ -99,12 +125,9 @@ void ofApp::draw()
     ofDrawLine(0, ofGetWindowHeight()/2, ofGetWindowWidth(), ofGetWindowHeight()/2);
     ofDrawLine(ofGetWindowWidth()/2, 0, ofGetWindowWidth()/2, ofGetWindowHeight());
 
-    // ofSetColor(0, 255, 0);
-    // ofDrawCircle(ofGetWindowWidth()/2, ofGetWindowHeight()/2, 10);
-
     for (int i = 0; i < placeList.size(); i++)
     {
-        placeList[i].draw();
+        placeList[i].draw(&font);
     }
 }
 

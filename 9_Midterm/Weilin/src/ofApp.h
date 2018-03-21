@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-
+#include "ofxGui.h"
 class ofApp : public ofBaseApp{
     
 public:
@@ -27,7 +27,7 @@ public:
     
     //Arduino communication
     ofSerial serial;
-    string str; 
+    string str;
     
     
     int alpha;
@@ -38,5 +38,13 @@ public:
     float dis;
     
     ofTrueTypeFont myFont;
+    ofFbo fbo;
+    
+    ofxPanel gui;
+    ofxFloatSlider spectrumAlpha;
+    ofxFloatSlider titleAlpha;
+    
+    bool showGui;
+    
     
 };

@@ -1,15 +1,14 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 
-class ofApp : public ofSimpleApp{
+class ofApp : public ofBaseApp{
 
 	public:
-
 		void setup();
 		void update();
 		void draw();
-};
 
-#endif
+		
+		
+};
