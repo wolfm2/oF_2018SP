@@ -1,4 +1,4 @@
-Here is my presentation documents:  https://docs.google.com/presentation/d/1RzNJnCD9G498M_sy_lfmXYWQsG41jua2ENHjZBU_3_Y/edit?usp=sharing
+Here is my presentation documents:  https://docs.google.com/presentation/d/1RzNJnCD9G498M_sy_lfmXYWQsG41jua2ENHjZBU_3_Y/edit?usp=sharing (video included)
 
 
 In my code, I use NASA Neo(Near Earh ) API try to visualize the data of the Neo asteroids pass through earth every day.
@@ -11,3 +11,15 @@ the date of the day it passes. It will also show the audience how many asteroids
 
 I used ofNoise() to make the asteroid moves and rotate kind of mimic the way it flies in the outter space. It will scale a little bit and slightly rotate during its way moving forward. 
 
+I also add sound into the program. It's the sound from outter space which features the animation of the asteroid. 
+
+
+Technical:
+1. JSON addon
+2. openframework
+3. NASA Api
+
+
+
+Further Iteration:
+1. Make the movements more smoothy than now using the ofNoise()
