@@ -1,0 +1,11 @@
+what I did:
+
+1. Translate and scale the image to take approximately .25 of the screen.
+2. re-scale and display image in the middle of the window.
+3. use keypress:
+
+	x,X -  y,Y - z,Z: Rotate negatively or positively in this axis 
+	q,a,s,d: Translate the object by 1 pixel per update
+	h,H - w,W: Scale the height/width negatively or positively
+	
+4.load a font from bin. and draw it use myfont.

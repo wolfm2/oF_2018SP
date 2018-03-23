@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    
+        ofBackground(0.160,190);
 }
 
 //--------------------------------------------------------------
@@ -15,22 +15,26 @@ int mouseX = 0;
 int mouseY = 0;
 
 void ofApp::draw(){
+    
     int deltaX = ofMap(mouseX, 0, ofGetWidth(), 0, 50);
-    int deltaY = ofMap(mouseY, 0, ofGetHeight(), 0, 80);
+    int deltaY = ofMap(mouseY, 0, ofGetHeight(), 0, 50);
     for (int y = 0; y < ofGetHeight(); y += 20 + deltaY) {
         for (int x = 0; x < ofGetWidth(); x += 20 + deltaX) {
             int mouseDistX = abs(x - mouseX);
-            if (mouseX < ofGetHeight()/2) {
+            int mouseDistY = abs(y - mouseY);
+            int alphaX = ofMap(mouseDistX, ofGetHeight(), 0, 0, 100);
+            int valueY = ofMap(mouseDistY, ofGetWidth(), 0, 100, 0);
+            
+            if (mouseDistX < 60 != mouseDistY > 60) {
                 ofNoFill();
             } else {
+                int sizeY = ofMap(mouseX, 0, ofGetHeight(), 0, 50);
                 ofFill();
             }
-            ofSetColor(100, 0, 255);
-            ofDrawCircle(x, y, 5);
+            ofSetColor(170, 100, 0, alphaX);
+            ofDrawCircle(x, y, 10);
         }
     }
-    
-    
 }
 
 //--------------------------------------------------------------
