@@ -21,6 +21,14 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+    
     ofxJSONElement json;
-		
+    ofTrueTypeFont myFont;
+    
+    int day = 0;
+    
+    float xPos = 0;
+    float lerpPct = 0;
+    
+    
 };

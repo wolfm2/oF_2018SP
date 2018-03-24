@@ -1,31 +1,30 @@
 #include "ofApp.h"
 
-#include<string>
-
-ofTrueTypeFont myFont;
-
-string Hi = "Hello World";
-
-std::string url = "https://api.darksky.net/forecast/bbe1a2d07a0c0875dc67ae522244bad3/40.7128,-74.0059";
-// weather data
-
-int dayMark;
-
-float circle_xPos;
-
-float lerpValue;
-
 //--------------------------------------------------------------
 void ofApp::setup(){
+    
+    //summary: when you press key 0-7, you will get the weather report, and background color change and orange circle will change
+    
+    
+    //load font
+    ofSetFrameRate(60);
+    myFont.load("mono.ttf",16);
+    ofSetCircleResolution(1000);
+    
+    string url = "https://api.darksky.net/forecast/81bc79dc54f45369dc001ff358c5857f/40.7370764,-74.0009978";
+    
     bool parsingSuccessful = json.open(url);
     
-    if (parsingSuccessful){
-        
-        ofLogNotice("ofAPP::setup") << json.getRawString(true);
-        
-    }else{
+    if (parsingSuccessful)
+    {
+        ofLogNotice("ofApp::setup") << json.getRawString(true);
+    } else {
         ofLogNotice("ofApp::setup") << "Failed to parse JSON.";
     }
+    
+   
+
+
 }
 
 //--------------------------------------------------------------
@@ -35,99 +34,73 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    lerpValue = ofMap(json["currently"]["time"].asInt(),
-                      json["daily"]["data"][0]["sunriseTime"].asInt(),
-                      json["daily"]["data"][0]["sunsetTime"].asInt(),
-                      0,
-                      1);
+    lerpPct = ofMap(json["currently"]["time"].asInt(), json["daily"]["data"][day]["sunriseTime"].asInt(), json["daily"]["data"][day]["sunsetTime"].asInt(), 0, 1);
     
-    ofColor yellow = ofColor::yellow;
-    ofColor black = ofColor::black;
+    ofColor black = ofColor(0, 0, 0);
+    ofColor yellow = ofColor(255, 255, 0);
     
-    ofSetColor(yellow.lerp(black, lerpValue));
-    ofDrawRectangle(0, 0, ofGetWidth(),ofGetHeight());
-    
-    ofSetColor(255);
-    
-    float fontWidth = myFont.stringWidth(Hi);
-    myFont.drawString(Hi, ofGetWidth()/2 - fontWidth/2, 400);
-    
-    ofSetColor(255);
-    
-    std::time_t epoch;
-    struct tm * day;
-    epoch = json["daily"]["data"][dayMark]["time"].asInt();
-    day = localtime(&epoch);
-    
-    float dayStringWidth = myFont.stringWidth(asctime(day));
-    myFont.drawString(asctime(day),100, 600);
+    ofColor background = black.lerp(yellow, lerpPct);
+    ofSetColor(background);
+    ofBackground(background);
     
     
-    //summary
-    std::string fore_summary = json["daily"]["data"][dayMark]["summary"].asInt();
-    myFont.drawString("summary: ", 100, 700);
-    myFont.drawString(fore_summary,100,770);
+    ofSetColor(255, 150, 0);
+    xPos = ofMap(json["currently"]["time"].asInt(), json["daily"]["data"][day]["sunriseTime"].asInt(), json["daily"]["data"][day]["sunsetTime"].asInt(), 0, ofGetWindowWidth(), 1);
+    ofDrawCircle(ofPoint(xPos, 100), 50);
     
-    std::string fore_temHigh = json["daily"]["data"]["dayMark"]["temperatureHigh"].asString();
-    myFont.drawString("tommrrow's temperature High: ", 100, 900);
-    myFont.drawString(fore_temHigh, 100,970);
+    ofSetColor(0);
+    ofDrawBitmapString("Hello World", 50, 50);
+    ofDrawBitmapString(json["daily"]["data"][day]["summary"], 130, 100);
+    ofDrawBitmapString(json["daily"]["data"][day]["temperatureMax"], 260, 150);
     
-    
-    circle_xPos = ofMap(json["daily"]["data"][0]["sunriseTime"].asInt();
-                        json["daily"]["data"][0]["sunsetTime"].asInt();
-                        0,
-                        ofGetWidth());
-    
-    ofSetColor(ofColor::orange);
-    ofDrawCircle(circle_xPos, 100, 50, 50);
-
-
+    myFont.drawString("Summary:", 20, 100);
+    myFont.drawString("High Temperature:", 20, 150);
+    myFont.drawString("Day 0", 20, 200);
 }
+
+
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    switch(key){
-        case'0':
-            dayMark = 0;
-            cout << 0;
-            
-            break;
-        case'1':
-            dayMark = 1;
-            cout << 1;
-            
-            break;
-        case'2':
-            dayMark = 2;
-            cout << 2;
-            
-            break;
-            
-        case'3':
-            dayMark = 3;
-            cout << 3;
-            
-            break;
-        case'4':
-            dayMark = 4;
-            cout << 4;
-            
-            break;
-        case'5':
-            dayMark = 5;
-            cout << 5;
-            
-            break;
-        case'6':
-            dayMark = 6;
-            cout << 6;
-            
-            break;
-        case'7':
-            dayMark = 7;
-            cout << 7;
-            
-            break;
+    if(key == '0') {
+        day = 0;
+        
+    }
+    
+    if(key == '1') {
+        day = 1;
+        cout<<"1";
+    }
+    
+    if(key == '2') {
+        day = 2;
+        cout<<"2";
+    }
+    
+    if(key == '3') {
+        day = 3;
+        cout<<"3";
+    }
+    
+    if(key == '4') {
+        day = 4;
+        cout<<"4";
+    }
+    
+    if(key == '5') {
+        day = 5;
+        cout<<"5";
+    }
+    
+    if(key == '6') {
+        day = 6;
+        cout<<"6";
+    }
+    
+    if(key == '7') {
+        day = 7;
+        cout<<"7";
+    }
 
 }
 
