@@ -15,9 +15,20 @@ float time0 = 0; //Time value, used for dt computing
 //--------------------------------------------------------------
 void ofApp::setup(){
     
+    gui.setup();
+    gui.add(spectrumAlpha.setup("spectrumAlpha",100,0,255));
+    gui.add(titleAlpha.setup("titleAlpha",100,0,255));
+    showGui = true;
+    
+    fbo.allocate(ofGetWidth(), ofGetHeight(), GL_RGBA32F);
+    fbo.begin();
+    ofClear(255,255,255, 0);
+    fbo.end();
+    
     //set font, image, video, sound
     myFont.load("Montserrat-Regular.ttf",12);
     video.load("stars.mp4");
+    video.setLoopState(OF_LOOP_NORMAL);
     image.load("light.png");
     serial.setup( 1, 9600 );
     sound.load( "solitude.wav" );
@@ -98,46 +109,51 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
-    sound.setVolume(vol);
-    ofBackground(0);
+    ofSetColor(255);
     video.draw(0, 0, ofGetWidth(), ofGetHeight());
     video.play();
     
-    ofSetColor(255);
+    ofSetColor(255,titleAlpha);
     myFont.drawString("Dancing Stars", 50, 70);
     
     //Draw spectrum
-    ofSetColor(255 );
+    //ofSetColor(255 );
     for (int i=0; i<N; i++) {
-        //Draw bandRad and bandVel by black color,
-        //and other by gray color
+        //Draw bandRad and bandVel by black color, and other by gray color
         if ( i == bandRad || i == bandVel ) {
-            ofSetColor(255); //Black color
+            ofSetColor(255,spectrumAlpha); //Black color
         } else {
-            ofSetColor( 128, 128, 128 ); //Gray color
+            ofSetColor( 128, 128, 128,spectrumAlpha ); //Gray color
         }
         ofDrawRectangle( 50 + i * 5, 700, 3, -spectrum[i] * 100 );
     }
     
+    fbo.begin();
+    ofSetColor(255,10);
+    video.draw(0, 0, ofGetWidth(), ofGetHeight());
+    video.play();
+    sound.setVolume(vol);
     
     //Draw stars
     //Move center of coordinate system to the screen center
-    
     ofPushMatrix();
-    //fbo.begin();
     ofTranslate( ofGetWidth() / 2, ofGetHeight() / 2 );
     ofScale(dis,dis);
-    //Draw cloud's points
+    //Draw star's points
     ofSetColor(ofRandom(50,150),ofRandom(50,150),ofRandom(50,150),alphaA);
     ofFill();
     for (int i=0; i<n; i++) {
-        //ofDrawCircle( p[i], 2 );
-        image.draw( p[i], 20 ,20);
+        image.draw( p[i], 30 ,30);
     }
     
     //Restore coordinate system
     ofPopMatrix();
+    fbo.end();
     
+    ofSetColor(255,255,255);
+    fbo.draw(0,0);
+    
+    if ( showGui ) gui.draw();
 }
 
 //--------------------------------------------------------------
@@ -149,6 +165,8 @@ void ofApp::keyPressed(int key){
             break;
             
     }
+    
+    if ( key == 'z' ) showGui = !showGui;
 }
 
 //--------------------------------------------------------------
@@ -197,6 +215,6 @@ void ofApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::dragEvent(ofDragInfo dragInfo){
     
 }

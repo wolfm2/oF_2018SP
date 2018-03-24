@@ -7,7 +7,7 @@ int myByte;
 int sensorRead;
 //--------------------------------------------------------------
 void ofApp::setup(){
-    mySerial.setup("/dev/cu.usbmodem14611", 9600);
+    mySerial.setup("/dev/cu.usbmodem14411", 9600);
     ofSetWindowShape(1680, 1050);
     bk.load("bk.jpg");
     ofSetCircleResolution(220);

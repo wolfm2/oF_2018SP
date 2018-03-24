@@ -11,12 +11,17 @@ class place : public ofBaseApp
         place(std::string nameIn, float angleIn, float distanceIn, std::string addressIn, vector<vector<vector<int>>> timeVectorIn, int currDayIn);
         void setup();
         void update();
-        void draw();
+        void draw(ofTrueTypeFont *);
+        void easing();
 
         ofPoint origin;
         int detectRadius = 10;
-        int drawRadius = 50;
-        int ringHeight = 25;
+        float drawRadius = 0;
+        float ringHeight = 0;
+
+        float newDrawRadius = 50;
+        float newRingHeight = 25;
+
 		int currDay;
 
         bool expanded = false;

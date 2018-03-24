@@ -1,0 +1,27 @@
+Sound :
+water drops with eco, that also worked well with the printing noice to create a distorted rhythem. 
+
+4 of (Movement, Easing, Shape changing, Alpha Channels, Matrix, FBO):
+Movement, Easing, Alpha channels, Frame buffering.
+which created the slit scan effect.
+
+
+Drawing (images and/or shapes):
+Image (the filter that was already loaded ) + the grapped video from the web cam.
+
+
+Fonts & Writing (a title screen at least):
+the screenshot instruction on screen.
+
+
+An ofxAddon not covered in class  (Arduino, Graphical effects, Device Drivers):
+- ofxSlitScan
+- ofxThermalPrinter
+
+
+A Web API -or- non-superficial Arduino usage:
+- using the thermal printer as a touch point to help emphasizing and delevering the message. 
+
+
+Interaction:
+there is both physical (printer, movement and gazing) and emotional interaction interaction.
