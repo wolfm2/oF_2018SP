@@ -1,5 +1,5 @@
-For this assignment,
-1. create a class for rectangles and include public methods(setup,update,draw) as well as private methods(rectangles'position, colors, radius and catchupspeed);
+For this assignment, I
+1. created a class for rectangles and include public methods(setup,update,draw) as well as private methods(rectangles'position, colors, radius and catchupspeed);
 2. set a random position/color/radius/catchupspeed for each rectangle;
-3. use an array to store five rectangles.
+3. used an array to store five rectangles.
 
