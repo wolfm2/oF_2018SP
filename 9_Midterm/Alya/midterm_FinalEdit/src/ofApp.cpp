@@ -13,7 +13,7 @@ void ofApp::setup(){
     mySound.play();
     
 //    printer.open("/dev/tty.PL2303-00002014");
-    myArduino.connect("/dev/tty.usbmodem14311", 19200);
+//    myArduino.connect("/dev/tty.usbmodem14311", 19200);               ********
 //    ofLogError();
 //    printer.listDevices();
 //    OF_EXIT_APP(0);

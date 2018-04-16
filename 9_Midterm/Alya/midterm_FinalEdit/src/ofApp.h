@@ -1,7 +1,7 @@
 
 #include "ofMain.h"
 #include "ofxSlitScan.h"
-#include "serial.h"
+
 
 
 class ofApp : public ofBaseApp{
