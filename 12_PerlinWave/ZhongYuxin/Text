@@ -1,0 +1,6 @@
+For this assignment, I
+
+1. created a class for lines;
+2. used Fbo to create a fading effect;
+3. used an array to store 5 different lines;
+4. used Matrix to rotate and translate lines.
