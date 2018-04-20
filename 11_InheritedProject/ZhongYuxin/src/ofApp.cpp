@@ -163,7 +163,7 @@ void ofApp::draw(){
         
         if (i%2 == 0){
             if(counter > 1){
-                Mashroom[i].x += mSpeed[i] * (counter - 0.5);
+                Mashroom[i].x += mSpeed[i] * counter;
                 }
                 else{
                 Mashroom[i].x += mSpeed[i];
@@ -173,7 +173,7 @@ void ofApp::draw(){
             }}
         else{
             if(counter > 1){
-                Mashroom[i].y += mSpeed[i] * (counter - 0.5);
+                Mashroom[i].y += mSpeed[i] * counter;
             }
             else{
                 Mashroom[i].y += mSpeed[i];
