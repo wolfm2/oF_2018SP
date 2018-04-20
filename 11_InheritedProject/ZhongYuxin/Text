@@ -1,0 +1,7 @@
+For this inherited project, I tried to make the game initially made by Yuemei more fun and challenging for users who are mainly childrens from 8-12.
+Therefore, I made those mushrooms move! Specifically, I 
+
+1. used array mSpeed[5] to store different speeds for each mushroom;
+2. used Perlin Noise to make speeds more random;
+3. when users get more carrots, mushrooms will move quicker;
+4. when mushrooms get to the boundaries of the canvas, they would automatically reverse the heading direction.
