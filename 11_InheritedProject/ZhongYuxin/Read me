@@ -1,5 +1,5 @@
 For this inherited project, I tried to make the game initially made by Yuemei more fun and challenging for users who are mainly childrens from 8-12.
-Therefore, I made those mushrooms move! Specifically, I 
+Therefore, I made those mushrooms move! Specifically, 
 
 1. used array mSpeed[5] to store different speeds for each mushroom;
 2. used Perlin Noise to make speeds more random; 66-70
