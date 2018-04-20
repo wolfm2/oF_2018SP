@@ -8,7 +8,7 @@ Therefore, I made those mushrooms move! Specifically,
 
 
 Issues:
-1. Sometimes the game would be just over at the beginning because the locaitons of the frog and mushrooms are so random.
-I did have trouble in figureing out how to avoid that so far.
+1. Sometimes the game would be just over in the beginning because the locaitons of the frog and mushrooms are so random 
+that they may get so close with each other at the very start. I did have trouble in figureing out how to avoid that so far.
 2. I wrote the Perlin Noise in the Setup() to get relatively random speeds but I failed to use it in the Draw() to get 
 mushrooms move smoothly.
