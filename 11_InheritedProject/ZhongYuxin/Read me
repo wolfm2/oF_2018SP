@@ -1,4 +1,4 @@
-For this inherited project, I tried to make the game initially made by Yuemei more fun and challenging for users who are mainly childrens from 8-12.
+For this inherited project, I tried to make the game initially made by Yuemei more fun and challenging.
 Therefore, I made those mushrooms move! Specifically, 
 
 1. used array mSpeed[5] to store different speeds for each mushroom;
@@ -8,5 +8,5 @@ Therefore, I made those mushrooms move! Specifically,
 
 
 Issues:
-1. Sometimes the game would be just over at the beginning because the locaitons of the frog and mushrooms are so random. I did have trouble in figureing out
-how to avoid that so far.
+1. Sometimes the game would be just over at the beginning because the locaitons of the frog and mushrooms are so random.
+I did have trouble in figureing out how to avoid that so far.
