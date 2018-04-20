@@ -5,3 +5,8 @@ Therefore, I made those mushrooms move! Specifically,
 2. used Perlin Noise to make speeds more random; 66-70
 3. when users get more carrots, mushrooms will move quicker; 162-184
 4. when mushrooms get to the boundaries of the canvas, they would automatically reverse the heading direction. 162-184
+
+
+Issues:
+1. Sometimes the game would be just over at the beginning because the locaitons of the frog and mushrooms are so random. I did have trouble in figureing out
+how to avoid that so far.
