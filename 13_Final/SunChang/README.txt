@@ -3,7 +3,7 @@ Youtube link: https://youtu.be/2l9QrT6FcaI
 Presentation Slides Link: https://docs.google.com/presentation/d/1UMPATEr0nSg_dvZfGXZGexXTRHJ4Dww8SBI7xEnkSkM/edit?usp=sharing
 
 
-This is my final, <Visual Rain>, a audio responsive and sound visualization project created with OpenFramework. 
+This is my final, <Psychedelic Rain>, a audio responsive and sound visualization project created with OpenFramework. 
 I visualized the music <Raniny Blood> by artist Hot Sugar. 
 
 
@@ -29,8 +29,8 @@ I also did a perlin noise line in the background represent the heartbeats.
 -Sound file loading & playing;
 -Nonlinear movement  (Perlin)
 -Matrix functions (Translate & scaling)
--A new (to you) topic from openframeworks (book?) not covered in class:Sound FFTs
+-A new to me topic from openframeworks not covered in class: Sound FFTs
 -A presentation (Google slides)
--0 Borrowed Code (I write and learnt and create all by myself. Truely 0 borrow)
+-0 Borrowed Code (I wrote and learnt and created all by myself. Truely 0 borrowed)
 
 
