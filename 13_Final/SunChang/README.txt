@@ -1,11 +1,10 @@
 
 Youtube link: https://youtu.be/2l9QrT6FcaI
-Presentation Slides Link:
+Presentation Slides Link: https://docs.google.com/presentation/d/1UMPATEr0nSg_dvZfGXZGexXTRHJ4Dww8SBI7xEnkSkM/edit?usp=sharing
 
 
 This is my final, <Visual Rain>, a audio responsive and sound visualization project created with OpenFramework. 
 I visualized the music <Raniny Blood> by artist Hot Sugar. 
-//这里一句话描述一下我的project视觉效果
 
 
 - My design concept is:
