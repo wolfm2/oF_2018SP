@@ -28,7 +28,10 @@ I used the adafruit circuit playground to control the vibration motor and neopix
     * Bluetooth :  ofApp.cpp:37, 270, 305, etc.
 * Electronics:
     ![alt text](https://github.com/wolfm2/oF_2018SP/blob/master/9_Midterm/Minzhe/circuit_playground.jpeg)
-
+    ![alt text](https://github.com/wolfm2/oF_2018SP/blob/master/13_Final/JiangMinzhe/1260-00.jpg)
+    ![alt text](https://github.com/wolfm2/oF_2018SP/blob/master/9_Midterm/Minzhe/circuit_playground.jpeg)
+    ![alt text](https://github.com/wolfm2/oF_2018SP/blob/master/9_Midterm/Minzhe/circuit_playground.jpeg)
+    
 ## Questions/Comments:
 I used the centroid idea you mentioned to me to get the pixel color of that center point. However, it's still very unstable. I tried different ways to make the color recognition more stable by filtering the noise of the color ofApp.cpp:130. Please let me know if you have a better solution for this.
 
