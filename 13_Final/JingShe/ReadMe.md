@@ -5,11 +5,11 @@ Demo:https://youtu.be/C_r5QsVnYEM
 
 Technical Requirements:
 1.OpenFrameworks;
-2.Sound—background music and Bomb voice;
-3.Perlin—create a unordered universe;
-4.Matrix Function-Use key to control spaceCraft;
-5.Sound FFTs—sound wave of background music and bomb voice
-6.Current time clock;
+2.Sound—background music and Bomb voice;// 17,24-26
+3.Perlin—create a unordered universe;//paricle.cpp particle.h/ofApp 55-64,99-103
+4.Matrix Function-Use key to control spaceCraft;//ofApp 158-165
+5.Sound FFTs—sound wave of background music and bomb voice// ofApp 153-155
+6.Current time clock;//120-133
 
 
 Interaction:
