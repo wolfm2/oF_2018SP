@@ -1,3 +1,6 @@
+Video: https://www.dropbox.com/s/xmjs0aeubj1d0hf/video_presentation.mp4?dl=0
+Slides: https://docs.google.com/presentation/d/1TVuA3isD7kFhUPBIV2XQRvh8u6-pTaUUlhS7Uc-5Rfs/edit?usp=sharing
+
 Translation/Overview:
 
 This project by default uses your microphone as input. Simply run the project and you 
@@ -14,7 +17,7 @@ For this project I used the ofxFft addon and the ofxPostProcessing addon.
 Requirements:
 
 For the sound requirement I use sound as input.
-For the nonlinear movement I ease out the histogram values to create a persistence effect.
+For the nonlinear movement I ease out/low pass filter the histogram values to create a persistence effect.
 For the new topic I used FFTs and postprocessing.
 
 Questions/Comments:
