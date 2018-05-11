@@ -1,0 +1,4 @@
+ofxFft
+ofxMaxim
+ofxOpenCv
+ofxOsc
