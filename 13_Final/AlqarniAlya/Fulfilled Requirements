@@ -1,0 +1,18 @@
+OpenFrameworks:
+-I am using OF as the main tool to achieve this project.
+
+Sound:
+-As iin the screenshot I was using lyrics from the song "Hey You" for Pink Floyd, according to the concept
+the intention was to play each song with a different string.
+
+Nonlinear movement:
+-the polylines with the noise.
+-the variation of the sizes of the letters and the distance between them in a direct relation with the mouse dragging event.
+
+Matrix functions:
+-ofEasyCam.
+  
+A new (to you) topic from openframeworks (book?) not covered in class:
+-working with lines.
+-buttongroup
+-gui
