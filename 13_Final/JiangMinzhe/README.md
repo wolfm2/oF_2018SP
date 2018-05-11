@@ -26,13 +26,13 @@ I used the adafruit circuit playground to control the vibration motor and neopix
     * OpenCv :  ofApp.cpp:73-83
     * LiquidFun :  ofApp.cpp:16-23, 307-310, etc.
     * Bluetooth :  ofApp.cpp:37, 270, 305, etc.
+    
+    
+    
+    
+    
+    
 * Electronics:    
-
-
-
-
-
-
         ![alt text](https://github.com/wolfm2/oF_2018SP/blob/master/13_Final/JiangMinzhe/circuit_playground.jpeg)
         ![alt text](https://github.com/wolfm2/oF_2018SP/blob/master/13_Final/JiangMinzhe/vibration_motor.jpg)
         ![alt text](https://github.com/wolfm2/oF_2018SP/blob/master/13_Final/JiangMinzhe/neopixel.jpg)
