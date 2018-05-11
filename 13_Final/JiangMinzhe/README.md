@@ -29,7 +29,7 @@ I used the adafruit circuit playground to control the vibration motor and neopix
 * Electronics:
     ![alt text](https://github.com/wolfm2/oF_2018SP/blob/master/13_Final/JiangMinzhe/circuit_playground.jpeg)
     ![alt text](https://github.com/wolfm2/oF_2018SP/blob/master/13_Final/JiangMinzhe/vibration_motor.jpg)
-    ![alt text]https://github.com/wolfm2/oF_2018SP/blob/master/13_Final/JiangMinzhe/neopixel.jpg)
+    ![alt text](https://github.com/wolfm2/oF_2018SP/blob/master/13_Final/JiangMinzhe/neopixel.jpg)
     ![alt text](https://github.com/wolfm2/oF_2018SP/blob/master/13_Final/JiangMinzhe/bluefruit.jpg)
     
 ## Questions/Comments:
