@@ -24,7 +24,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
 		ofMesh mesh;
-		ofEasyCam easyCam;
     
         ofVideoGrabber movie;
     
@@ -34,5 +33,6 @@ class ofApp : public ofBaseApp{
     
     int vedioHeight, vedioWidth;
     int findHue;
+    
     
 };

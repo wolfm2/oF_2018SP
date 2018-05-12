@@ -1,6 +1,9 @@
 #include "ofApp.h"
 #include <math.h> 
 
+ofEasyCam easyCam;
+
+
 ofImage spider;
 ofImage buildL;
 ofImage buildR1, buildR2, buildR3;
@@ -30,6 +33,18 @@ int mouseCircleRadius =50;
 ofVec3f testSphere;
 
 int keyPressedControllingDepth;
+
+// for spiderFlying
+float xRotate, yRotate, zRotate = 0;
+float spiderScale =1;
+int xTranslate, yTranslate;
+ofVec2f screenPos;
+ofVec3f worldPos;
+ofVec2f mousePre;
+ofVec2f movePos;
+ofVec2f dest;
+float speed =0.1;
+int ballMark=0;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -85,7 +100,7 @@ void ofApp::setup(){
 
 
 	numVertices = mesh.getNumVertices();
-	cout << numVertices;
+	//cout << numVertices;
 	for (int a = 0; a<numVertices; ++a) {
 		ofVec3f verta = mesh.getVertex(a);
 		if (a == 50) {
@@ -106,6 +121,20 @@ void ofApp::setup(){
 	
 }
 
+
+/*void ball(ofVec2f vect, ofVec2f dest){
+    movePos.x = vect.x;
+    movePos.y = vect.y;
+    while (1){
+        movePos.x+= (dest.x-movePos.x)/vect.distance(dest)*speed;
+        movePos.y+= (dest.y -movePos.y)/vect.distance(dest)*speed;
+        ofDrawCircle(movePos.x, movePos.y, 5);
+        if (dest.distance(movePos)<5){
+            break;
+        }
+    }
+    
+}*/
 //--------------------------------------------------------------
 void ofApp::update(){
 
@@ -167,18 +196,24 @@ void ofApp::draw(){
     
 	easyCam.begin();
 		ofPushMatrix();
-		ofTranslate(-200, -200, 0);
-			mesh.draw();
-			ofSetColor(255, 255, 255);
-			ofDrawSphere(testSphere, 10);
-			//cout << testSphere.x << "/" << testSphere.y << "/" << testSphere.z<<"\n";
-			//ofDrawAxis(100);
+            //----300,350 x,y
+            ofTranslate(xTranslate, yTranslate);
+            ofRotateX(xRotate);
+            ofRotateY(yRotate);
+            ofRotateZ(zRotate);
+            ofScale(spiderScale,spiderScale);
+                mesh.draw();
+                ofSetColor(255, 255, 255);
+                ofDrawSphere(testSphere, 10);
+                //cout << testSphere.x << "/" << testSphere.y << "/" << testSphere.z<<"\n";
+                ofDrawAxis(100);
 		ofPopMatrix();
 	easyCam.end();
 
 	ofSetColor(0, 255, 0,10);
 	ofDrawCircle(mouseCircleX, mouseCircleY, mouseCircleRadius);
 	
+//    ball(mousePre,dest);
 
 }
 
@@ -186,6 +221,7 @@ void ofApp::draw(){
 void ofApp::keyPressed(int key){
 	switch (key)
 	{
+            
 		case 'w':
             soundBlow.play();
 			keyPressedControllingDepth = 1;
@@ -193,13 +229,32 @@ void ofApp::keyPressed(int key){
 		case 's':
             soundBlow.play();
 			keyPressedControllingDepth = -1;
-			break;			
+			break;
+        case 'f':
+            mousePre.set(ofGetMouseX(), ofGetMouseY());
+            cout<<mousePre;
 		default:
 			break;
 	}
 
 	//cout << keyPressedControllingDepth<<"\n";
 }
+
+
+
+void actAsRight(int x, int y){
+    
+ 
+    //zRotate = 30;
+    xTranslate = x-mousePre.x;
+    yTranslate = mousePre.y-y;
+   
+    dest.set(x,y);
+    ballMark=1;
+    
+   
+}
+
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
@@ -218,7 +273,13 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+    if(x>=700&&x<=1000&&y>=200&&y<=800){
+        actAsRight(x,y);
+        
+    }
+    
+    easyCam.reset();
+    cout<<ofGetMouseX()<<"|"<<ofGetMouseY();
 }
 
 //--------------------------------------------------------------
@@ -250,3 +311,8 @@ void ofApp::gotMessage(ofMessage msg){
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
 }
+
+
+
+//710,210    900,200
+//815,770    1000,800
